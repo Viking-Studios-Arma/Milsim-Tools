@@ -21,7 +21,7 @@ class CfgMainMenuSpotlight {
 		text = "Main Ops Server";
 		textIsQuote = 0;
 		picture = "\VSC\image\ONI_Recon.paa";
-		//video = ;
+		//video = ; //Maybe ill make one, one day (Maybe when i have the energy)
 		action = "connectToServer [""45.92.44.67"", 2402, """"]"; // Amateur says this goes --> IP, Port, Password
 		actionText = "Connect to Main Server";
 		condition = true;
@@ -30,7 +30,7 @@ class CfgMainMenuSpotlight {
 		text = "Hearts and Minds Server";
 		textIsQuote = 0;
 		picture = "\VSC\image\ONI_Recon.paa";
-		//video = ; //Maybe ill make one, one day
+		//video = ; //Yeah, Maybe not
 		action = "connectToServer [""45.92.44.67"", 2502, """"]"; // Amateur says this goes --> IP, Port, Password
 		actionText = "Connect to H&M Server";
 		condition = true; //Lies
