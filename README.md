@@ -14,14 +14,14 @@
 	<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3016023028">
 		<img src="https://img.shields.io/steam/size/3016023028?label=Download&logo=steam" alt="Download" />
 	</a>
-	<a href="https://github.com/Viking-Studios-Arma/ONI_Recon_Factions/releases">
-		<img src="https://img.shields.io/github/release/Viking-Studios-Arma/ONI_Recon_Factions.svg?label=Version" alt="Version" />
+	<a href="https://github.com/Viking-Studios-Arma/ONI_Recon_Core/releases">
+		<img src="https://img.shields.io/github/release/Viking-Studios-Arma/ONI_Recon_Core.svg?label=Version" alt="Version" />
 	</a>
-	<a href="https://github.com/Viking-Studios-Arma/ONI_Recon_Factions/issues">
-		<img src="http://img.shields.io/github/issues-raw/Viking-Studios-Arma/ONI_Recon_Factions.svg?label=Issues&style=flat" alt="Issues" />
+	<a href="https://github.com/Viking-Studios-Arma/ONI_Recon_Core/issues">
+		<img src="http://img.shields.io/github/issues-raw/Viking-Studios-Arma/ONI_Recon_Core.svg?label=Issues&style=flat" alt="Issues" />
 	</a>
-	<a href="Viking-Studios-Arma/ONI_Recon_Factions/blob/main/LICENSE">
-		<img src="https://img.shields.io/github/license/Viking-Studios-Arma/ONI_Recon_Factions.svg?style=flat&label=Licence" alt="License">
+	<a href="Viking-Studios-Arma/ONI_Recon_Core/blob/main/LICENSE">
+		<img src="https://img.shields.io/github/license/Viking-Studios-Arma/ONI_Recon_Core.svg?style=flat&label=Licence" alt="License">
 	</a>
 </p>
 
