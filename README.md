@@ -60,7 +60,7 @@ If on Windows, use the `tools\make.ps1` file to build the mod for you. It will b
 
 The build script will NOT leave the private key in the `keys` folder. It will delete it instead, to avoid any accidental uploading or distribution.
 
-Be aware, that the names of the `.bisign` and `.bikey` files depend on the latest tag on git. This means that, if you wish to upload a release, it is advised to first tag the latest git commit, and then build the mod. That way you have a nice version, such as `VS_ONI_v1.0.0.bikey` rather than `VS_ONI_Stable-gae17a97.bikey`.
+Be aware, that the names of the `.bisign` and `.bikey` files depend on the latest tag on git. This means that, if you wish to upload a release, it is advised to first tag the latest git commit, and then build the mod. That way you have a nice version, such as `VS_ONI_C_v1.0.0.bikey` rather than `VS_ONI_C_-gae17a97.bikey`.
 ## Naming conventions
 For standardisation between class names and to prevent any possible future conflicts with class names the following naming convention has been developed:
 - for code: ONI_Recon
