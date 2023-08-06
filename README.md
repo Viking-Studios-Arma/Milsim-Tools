@@ -4,15 +4,15 @@
 	<a href="https://discord.gg/9pJTHHzaFC">
 		<img src="https://img.shields.io/discord/1032437213100777502.svg?label=Discord&logo=Discord&colorB=7289da&style=for-the-badge" alt="Discord Server">
 	</a>
-	<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2877010969">
-		<img src="https://img.shields.io/steam/subscriptions/2877010969?style=for-the-badge" alt="Steam Subscriptions">
+	<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3016023028">
+		<img src="https://img.shields.io/steam/subscriptions/3016023028?style=for-the-badge" alt="Steam Subscriptions">
 	</a>
 	
 </p>
 </p>
 <p align="center">
-	<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2265703421">
-		<img src="https://img.shields.io/steam/size/2265703421?label=Download&logo=steam" alt="Download" />
+	<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3016023028">
+		<img src="https://img.shields.io/steam/size/3016023028?label=Download&logo=steam" alt="Download" />
 	</a>
 	<a href="https://github.com/Viking-Studios-Arma/ONI_Recon_Factions/releases">
 		<img src="https://img.shields.io/github/release/Viking-Studios-Arma/ONI_Recon_Factions.svg?label=Version" alt="Version" />
