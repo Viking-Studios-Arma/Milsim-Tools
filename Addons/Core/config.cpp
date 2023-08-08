@@ -2,8 +2,8 @@ class CfgPatches {
 	class ONI_Recon_core {
 		// Addon identity
 		name = "ONI Recon - Core";
-		author = "Viking Studios";
-		authors[] = {"Amateur-god"};
+		author = "MokTech";
+		authors[] = {"Mokka"};
 		url = "https://discord.gg/bkdGvUNFbb";
 		version = 1.0;
 		versionAr[] = {1,0,0,0};
