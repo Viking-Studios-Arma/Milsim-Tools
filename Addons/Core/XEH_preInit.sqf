@@ -42,7 +42,7 @@ private _oni_core_settings = [
 			// One day this will re-init all arsenals that have this filter set
 		},
 		true
-	]
+	],
 ];
 
 {_x call CBA_Settings_fnc_init;} forEach _oni_core_settings;
@@ -59,8 +59,8 @@ private _prettyName = "";
 		[format["Map Climate - %1", _prettyName], "Select the appropriate climate for this map"],
 		["ONI Arsenal", "World Climates"],
 		[
-			["all", "woodland", "multicam", "desert", "arctic"], // Code (keep the same, else settings will reset)
-			["All", "Flecktarn", "Multitarn", "Tropentarn", "Arctic"], // Display name
+			["all", "woodland", "black", "urban", "marine"], // Code (keep the same, else settings will reset)
+			["All", "woodland", "black", "urban", "marine"], // Display name
 			0
 		],
 		1,

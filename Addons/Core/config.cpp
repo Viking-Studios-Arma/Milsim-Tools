@@ -1,5 +1,5 @@
 class CfgPatches {
-	class ONI_Recon_core {
+	class ONI_core {
 		// Addon identity
 		name = "ONI Recon - Core";
 		author = "Viking Studios";
@@ -8,7 +8,7 @@ class CfgPatches {
 		version = 1.0;
 		versionAr[] = {1,0,0,0};
 		versionStr = "v1.0.0";
-		requiredAddons[] = {"A3_Modules_F"};
+		requiredAddons[] = {"A3_Modules_F","cba_settings","ace_arsenal","3DEN","ace_medical",};
 		units[] = {};
 		weapons[] = {};
 		magazines[] = {};
@@ -26,7 +26,7 @@ class CfgFunctions {
 			class addSpectator {};
 			class changeSpeakVolume {};
 			class edenLoadSettings {};
-			class edenCreateAssets {};
+			//class edenCreateAssets {};
 			class getCurators {};
 			class getDeadPlayers {};
 			class getDeployAnimations {};
@@ -65,14 +65,14 @@ class CfgFunctions {
 
 class Extended_PreInit_EventHandlers {
 	class oni_core_preInit {
+		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_clientPreInit.sqf';";
 		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_preInit.sqf'";
 	};
 };
 
 class Extended_PostInit_EventHandlers {
 	class oni_core_postInit {
-		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_postInit.sqf'";
-		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_clientPreInit.sqf';";		
+		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_postInit.sqf'";		
 	};
 };
 
@@ -81,6 +81,7 @@ class Extended_PostInit_EventHandlers {
 #include "Configs\CfgEdenGUI.hpp"
 #include "configs\CfgEdenLoadouts.hpp"
 #include "configs\CfgEdenModules.hpp"
+//#include "configs\CfgEdenTools.hpp"
 #include "configs\CfgEnableDebug.hpp"
 #include "configs\CfgLadderTweak.hpp"
 #include "configs\CfgMedicalEquipment.hpp"

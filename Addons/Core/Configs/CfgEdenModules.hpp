@@ -11,7 +11,7 @@ Author:
 class CfgFactionClasses {
 	class NO_CATEGORY;
 	class ONI_CORE_Modules : NO_CATEGORY {
-		displayName = "ONI Core Modules";
+		displayName = "[ONI] Modules";
 	};
 };
 
