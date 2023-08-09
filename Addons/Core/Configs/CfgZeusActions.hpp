@@ -10,7 +10,7 @@ Author:
 ---------------------------------------------------------------------------- */
 class ACE_ZeusActions {
 	class ONI_CORE_Zeus_Tools {
-		displayName = "2BNB Tools";
+		displayName = "ONI Tools";
 		icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa";
 
 		class Get_Dead_Players {

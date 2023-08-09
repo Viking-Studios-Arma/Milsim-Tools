@@ -39,7 +39,7 @@ if (_logic getVariable ["HasArsenal", false]) then {
 };
 
 if (_logic getVariable ["HasFullHeal", false]) then {
-	[_objects] call oni_core_fnc_fullHeal;
+	[_objects] call oni_core_fnc_addfullHeal;
 };
 
 [format["Loading Spectator? %1, with %2", _logic getVariable ["HasSpectator", false], _objects], "core\functions\eden_modules\fn_barracksModule.sqf"] call oni_core_fnc_log;
