@@ -26,7 +26,7 @@ class CfgFunctions {
 			class addSpectator {};
 			class changeSpeakVolume {};
 			class edenLoadSettings {};
-			//class edenCreateAssets {};
+			class edenCreateAssets {};
 			class getCurators {};
 			class getDeadPlayers {};
 			class getDeployAnimations {};
