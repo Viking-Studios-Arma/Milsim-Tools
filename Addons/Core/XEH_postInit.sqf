@@ -14,7 +14,7 @@
 			deleteVehicle _x;
 		} forEach _loadoutUnits;
 		publicVariable "oni_core_loadouts";
-		[oni_core_loadouts] remoteExec ["oni_core_core_fnc_setDefaultLoadouts", 0, true];
+		[oni_core_loadouts] remoteExec ["oni_core_fnc_setDefaultLoadouts", 0, true];
 	};
 };
 
@@ -24,17 +24,17 @@
 		// Array of position AGLS, ObjNull or the object under the module as it's placed
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-		[_position, _objectUnderCursor] call oni_core_core_fnc_addBarracks;
+		[_position, _objectUnderCursor] call oni_core_fnc_addBarracks;
 	}] call zen_custom_modules_fnc_register;
 
 	["ONI Modules", "Force Respawn All",
 	{
-		[] call oni_core_core_fnc_forceRespawn;
+		[] call oni_core_fnc_forceRespawn;
 	}] call zen_custom_modules_fnc_register;
 
-	["ZEN loaded successfully", "core\XEH_preInit.sqf"] call oni_core_core_fnc_log;
+	["ZEN loaded successfully", "core\XEH_preInit.sqf"] call oni_core_fnc_log;
 }, [], 120, {
-	["ZEN not loaded in time!", "core\XEH_preInit.sqf"] call oni_core_core_fnc_log;
+	["ZEN not loaded in time!", "core\XEH_preInit.sqf"] call oni_core_fnc_log;
 }] call CBA_fnc_waitUntilAndExecute;
 
 
@@ -44,12 +44,12 @@
 		// Array of position AGLS, ObjNull or the object under the module as it's placed
 		params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-		[_position, _objectUnderCursor] call oni_core_core_fnc_addMusicRadio;
+		[_position, _objectUnderCursor] call oni_core_fnc_addMusicRadio;
 	}] call zen_custom_modules_fnc_register;
 
-	["KLPQ Music Player loaded successfully", "core\XEH_preInit.sqf"] call oni_core_core_fnc_log;
+	["KLPQ Music Player loaded successfully", "core\XEH_preInit.sqf"] call oni_core_fnc_log;
 }, [], 120, {
-	["KLPQ Music Player not loaded in time!", "core\XEH_preInit.sqf"] call oni_core_core_fnc_log;
+	["KLPQ Music Player not loaded in time!", "core\XEH_preInit.sqf"] call oni_core_fnc_log;
 }] call CBA_fnc_waitUntilAndExecute;
 
 // Export the mission setting into the CBA Setting on mission start
@@ -58,13 +58,13 @@ if (
 	&& (["oni_core_respawn_timer", "mission"] call CBA_settings_fnc_get) isEqualTo (["oni_core_respawn_timer", "default"] call CBA_settings_fnc_get)
 	&& typeName (getMissionConfigValue "respawnDelay") == "SCALAR"
 ) then {
-	[getMissionConfigValue "respawnDelay"] call oni_core_core_fnc_setRespawnTimer;
+	[getMissionConfigValue "respawnDelay"] call oni_core_fnc_setRespawnTimer;
 };
 
 player addEventHandler ["Killed", {
 	params ["_player"];
 
-	private _curators = call oni_core_core_fnc_getCurators;
+	private _curators = call oni_core_fnc_getCurators;
 	if (_player in _curators) exitWith { // If zeus, instantly respawn
 		[] spawn {
 			setPlayerRespawnTime 0;
@@ -75,16 +75,16 @@ player addEventHandler ["Killed", {
 
 	setPlayerRespawnTime oni_core_respawn_timer;
 
-	[format["%1 just died!", name _player]] remoteExec ["oni_core_core_fnc_notifyZeus", _curators];
+	[format["%1 just died!", name _player]] remoteExec ["oni_core_fnc_notifyZeus", _curators];
 	_player setVariable ["oni_core_diedAt", serverTime, true];
-	[format["%1 died at: %2", name _player, _player getVariable "oni_core_diedAt"], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+	[format["%1 died at: %2", name _player, _player getVariable "oni_core_diedAt"], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 }];
 
 player addEventHandler ["Respawn", {
 	params ["_player", "_corpse"];
 
-	[["%1 has just respawned!", name _player], "warning"] remoteExec ["oni_core_core_fnc_notifyZeus", call oni_core_core_fnc_getCurators];
-	[format["%1 respawned at: %2. Died at: %3", name _player, serverTime, _player getVariable "oni_core_diedAt"], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+	[["%1 has just respawned!", name _player], "warning"] remoteExec ["oni_core_fnc_notifyZeus", call oni_core_fnc_getCurators];
+	[format["%1 respawned at: %2. Died at: %3", name _player, serverTime, _player getVariable "oni_core_diedAt"], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 }];
 
 // Pass magazine keybinding
@@ -99,7 +99,7 @@ player addEventHandler ["Respawn", {
 			&& {[ACE_player, _target, primaryWeapon ACE_player] call ace_interaction_fnc_canPassMagazine}
 			&& ACE_player distance _target < 4
 		) then {
-			[format["%1 passed a magazine", name ACE_player], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+			[format["%1 passed a magazine", name ACE_player], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 			[ACE_player, _target, primaryWeapon ACE_player] call ace_interaction_fnc_passMagazine;
 			playSound "ace_overheating_fixing_pistol";
 			hint "Magazine passed!";
@@ -119,7 +119,7 @@ player addEventHandler ["Respawn", {
 		"oni_core_increaseSpeakVolume",
 		["Increase Direct Speech Volume", "Use this to increase direct speech volume until ""Yelling"""],
 		{
-			[true] call oni_core_core_fnc_changeSpeakVolume;
+			[true] call oni_core_fnc_changeSpeakVolume;
 		},
 		'',
 		[0xF8, [false, false, true]] // Alt + Mouse wheel Up
@@ -130,13 +130,13 @@ player addEventHandler ["Respawn", {
 		"oni_core_decreaseSpeakVolume",
 		["Decrease Direct Speech Volume", "Use this to decrease direct speech volume until ""Whisper"""],
 		{
-			[false] call oni_core_core_fnc_changeSpeakVolume;
+			[false] call oni_core_fnc_changeSpeakVolume;
 		},
 		'',
 		[0xF9, [false, false, true]] // Alt + Mouse wheel Down
 	] call CBA_fnc_addKeybind;
 }, [], 20, {
-	["TFAR is not loaded!", "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+	["TFAR is not loaded!", "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 }] call CBA_fnc_waitUntilAndExecute;
 
 
@@ -153,7 +153,7 @@ addMissionEventHandler ["Map", {
 
 		ace_hearing_disableVolumeUpdate = true;
 		0.1 fadeSound oni_core_map_volume;
-		["Lowered volume in map", "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+		["Lowered volume in map", "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 
 	} else {
 
@@ -161,18 +161,18 @@ addMissionEventHandler ["Map", {
 			ace_hearing_disableVolumeUpdate = false;
 
 			0.1 fadeSound oni_core_restoredVolume;
-			[format["Restored volume from map to %1", oni_core_restoredVolume], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+			[format["Restored volume from map to %1", oni_core_restoredVolume], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 
 		} else {
 
 			if (acex_volume_isLowered) then {
 				call acex_volume_fnc_lowerVolume;
-				["Going back to ACEX lowered volume", "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+				["Going back to ACEX lowered volume", "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 			} else {
 
 				if (soundVolume != acex_volume_initialGameVolume) then {
 					call acex_volume_fnc_restoreVolume;
-					["Letting ACEX restore volume", "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+					["Letting ACEX restore volume", "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 				};
 			};
 		};
@@ -234,16 +234,16 @@ addMissionEventHandler ["Map", {
 							// In case unit is following someone
 							_x setVariable ["oni_core_following", nil, true];
 
-							[format["%1 told %2 to stop with a %3 gesture", _player, _x, _gesture], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+							[format["%1 told %2 to stop with a %3 gesture", _player, _x, _gesture], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 							doStop _x;
 							false;
 						} else {
-							[format["%1 detected %2 in a vehicle for stop gesture", _player, _x, _gesture], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+							[format["%1 detected %2 in a vehicle for stop gesture", _player, _x, _gesture], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 							if (effectiveCommander (vehicle _x) isEqualTo _x) then {
 								// In case unit is following someone
 								_x setVariable ["oni_core_following", nil, true];
 
-								[format["%1 told %2 to stop with a %3 gesture", _player, _x, _gesture], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+								[format["%1 told %2 to stop with a %3 gesture", _player, _x, _gesture], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 								doStop _x;
 								false;
 							};
@@ -270,7 +270,7 @@ addMissionEventHandler ["Map", {
 		{
 			if (count weapons _x == 0 && {random 1 < _chance}) then {
 				if ([position _player, getDir _player, 40, position _x] call BIS_fnc_inAngleSector) then {
-					[format["%1 told %2 to go away with a %3 gesture", _player, _x, _gesture], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+					[format["%1 told %2 to go away with a %3 gesture", _player, _x, _gesture], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 					// In case unit is following someone
 					_x setVariable ["oni_core_following", nil, true];
 
@@ -294,13 +294,13 @@ addMissionEventHandler ["Map", {
 	if ({_x == _gesture} count _acceptedGestures > 0 && _player distance _target < 10) then {
 
 		if (count weapons _target == 0 && {random 1 < _chance}) then {
-		[format["%1 told %2 to follow using a %3 gesture", _player, _target, _gesture], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+		[format["%1 told %2 to follow using a %3 gesture", _player, _target, _gesture], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 
 			private _following = [_target, _player] spawn {
 				params ["_target", "_player"];
 				_target setVariable ["oni_core_following", _player, true];
 
-				[format["%1 about to move to %2 (%3)", _target, _player, _target getVariable ["oni_core_following", "nothing"]], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+				[format["%1 about to move to %2 (%3)", _target, _player, _target getVariable ["oni_core_following", "nothing"]], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 				private _playerPosition = [];
 				private _index = 0;
 
@@ -310,7 +310,7 @@ addMissionEventHandler ["Map", {
 					};
 
 					if !(_playerPosition isEqualTo (getPosASL _player)) then {
-						[format["%1 moving", _target], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+						[format["%1 moving", _target], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 						_target doMove (getPosASL _player vectorDiff (vectorDir _player vectorMultiply 4));
 						_playerPosition = getPosASL _player;
 					};
@@ -337,7 +337,7 @@ addMissionEventHandler ["Map", {
 			[position _target, getDir _target, 120, position _player] call BIS_fnc_inAngleSector
 			&& ((side group _target) getFriend (side group _player)) > 0.6 // Is friendly-ish?
 		) then {
-			[format["%1 waved at %2 with a %3 gesture", _player, _target, _gesture], "core\XEH_postInit.sqf"] call oni_core_core_fnc_log;
+			[format["%1 waved at %2 with a %3 gesture", _player, _target, _gesture], "core\XEH_postInit.sqf"] call oni_core_fnc_log;
 			[_target, _player] spawn {
 				_target = _this select 0;
 				sleep 1;

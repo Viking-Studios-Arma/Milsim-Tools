@@ -66,13 +66,13 @@ class CfgFunctions {
 class Extended_PreInit_EventHandlers {
 	class oni_core_preInit {
 		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_preInit.sqf'";
+		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_clientPreInit.sqf';";	
 	};
 };
 
 class Extended_PostInit_EventHandlers {
 	class oni_core_postInit {
-		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_postInit.sqf'";
-		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_clientPreInit.sqf';";		
+		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_postInit.sqf'";	
 	};
 };
 
@@ -81,6 +81,7 @@ class Extended_PostInit_EventHandlers {
 #include "Configs\CfgEdenGUI.hpp"
 #include "configs\CfgEdenLoadouts.hpp"
 #include "configs\CfgEdenModules.hpp"
+#include "configs\CfgEdenTools.hpp"
 #include "configs\CfgEnableDebug.hpp"
 #include "configs\CfgLadderTweak.hpp"
 #include "configs\CfgMedicalEquipment.hpp"
