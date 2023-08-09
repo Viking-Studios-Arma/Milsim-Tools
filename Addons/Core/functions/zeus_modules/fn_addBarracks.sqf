@@ -30,20 +30,12 @@ if (_objects isEqualType objNull) then {
 private _availableFilters = [
 	"",
 	"standard",
-	"marine",
-	"urban",
-	"black",
-	"woodland",
 	"mission"
 ];
 
 private _availableFilterNames = [
 	["Full", "Unlimited Arsenal!"],
 	["Standard", "All Camo ONI equipment"],
-	["Marine", "MARINE ONI equipment"],
-	["Urban", "Urban ONI equipment"],
-	["Black", "Black ONI equipment"],
-	["Woodland", "woodland ONI equipment"],
 	"Mission"
 ];
 

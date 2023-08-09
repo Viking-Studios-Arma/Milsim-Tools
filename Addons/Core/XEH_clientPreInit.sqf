@@ -12,9 +12,9 @@ private _oni_core_settings = [
 		true
 	],
 	[
-		"oni_core_arsenal_whitelist_marine",
+		"oni_core_arsenal_whitelist_black",
 		"EDITBOX",
-		["Marine", "Marine equipment whitelist"],
+		["Black", "BLACK equipment whitelist"],
 		["ONI Arsenal", "Arsenal Whitelists"],
 		"[]",
 		1,
@@ -24,9 +24,9 @@ private _oni_core_settings = [
 		true
 	],
 	[
-		"oni_core_arsenal_whitelist_black",
+		"oni_core_arsenal_whitelist_marine",
 		"EDITBOX",
-		["Black", "Black equipment whitelist"],
+		["Marine", "Marine equipment whitelist"],
 		["ONI Arsenal", "Arsenal Whitelists"],
 		"[]",
 		1,

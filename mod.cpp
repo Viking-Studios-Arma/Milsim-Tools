@@ -1,5 +1,5 @@
 name = "ONI Recon - Core";
-picture = "ONI_Recon.paa";
+picture = "Oni-recon.paa";
 hidePicture = "true";
 hideName = "false";
 actionName = "Discord";

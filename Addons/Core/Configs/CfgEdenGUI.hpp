@@ -34,7 +34,7 @@ class oni_core_edenGUI {
 			w = 0.225;
 			h = 0.06;
 			colorBackground[] = {0.5,0.5,0.5,0.6};
-			tooltip = "Callsign of sections. Default: Raider";
+			tooltip = "Callsign of sections. Default: Noble";
 			sizeEx = 1.1 * GUI_GRID_H;
 			canModify = 1;
 		};
@@ -54,7 +54,7 @@ class oni_core_edenGUI {
 			w = 0.225;
 			h = 0.06;
 			colorBackground[] = {0.5,0.5,0.5,0.6};
-			tooltip = "Callsign for zeus. Default: Monarch";
+			tooltip = "Callsign for zeus. Default: Noble Actual";
 			sizeEx = 1.1 * GUI_GRID_H;
 			canModify = 1;
 		};
@@ -80,13 +80,13 @@ class oni_core_edenGUI {
 			sizeEx = 1.1 * GUI_GRID_H;
 
 			class Items {
-				class MTP {
-					text = "MTP";
-					data = "MTP";
+				class BLACK {
+					text = "BLACK";
+					data = "BLACK";
 				};
-				class Desert {
-					text = "Desert";
-					data = "Desert";
+				class Marine {
+					text = "Marine";
+					data = "Marine";
 				};
 				class Woodland {
 					text = "Woodland";
@@ -150,7 +150,7 @@ class oni_core_edenGUI {
 		};
 		class oni_core_title: RscText {
 			idc = 1004;
-			text = "Load 2BNB Slots & Modules";
+			text = "Load ONI Slots & Modules";
 			x = 0.112499;
 			y = 0.04;
 			w = 0.554999;
