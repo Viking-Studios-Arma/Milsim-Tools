@@ -4,7 +4,7 @@ class CfgMainMenuSpotlight {
 		textIsQuote = 0;
 		picture = "x\VS_ONI_C\Core\image\ONI_Recon.paa";
 		//video = ; //Maybe ill make one, one day (Maybe when i have the energy)
-		action = "connectToServer [""45.92.44.67"", 2502, ""password""]"; // Amateur says this goes --> IP, Port, Password
+		action = "connectToServer [""45.92.44.67"", 2302, ""password""]"; // Amateur says this goes --> IP, Port, Password
 		actionText = "Connect to Main Server";
 		condition = true;
 	};
@@ -13,7 +13,7 @@ class CfgMainMenuSpotlight {
 		textIsQuote = 0;
 		picture = "x\VS_ONI_C\Core\image\ONI_Recon.paa";
 		//video = ; //Yeah, Maybe not
-		action = "connectToServer [""45.92.44.67"", 2602, ""password""]"; // Amateur says this goes --> IP, Port, Password
+		action = "connectToServer [""45.92.44.67"", 2402, ""password""]"; // Amateur says this goes --> IP, Port, Password
 		actionText = "Connect to H&M Server";
 		condition = true; //Lies
 	};
