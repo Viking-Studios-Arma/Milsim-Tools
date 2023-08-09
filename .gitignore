@@ -4,9 +4,10 @@ tools/inc.tmp
 tools/user.txt
 archives/
 *texHeaders.bin
-.vscode
+/.vscode
 *.log
 .build/
 .builds/
 raw textures/**/*.png
 raw textures/**/*.jpg
+
