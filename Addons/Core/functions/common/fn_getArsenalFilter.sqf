@@ -22,7 +22,7 @@ Author:
 ---------------------------------------------------------------------------- */
 params [["_filter", "", [""]]];
 
-[format["Getting whitelists for filter %1", _filter], "core\functions\fn_getArsenalFilter.sqf"] call bnb_es_core_fnc_log;
+[format["Getting whitelists for filter %1", _filter], "core\functions\common\fn_getArsenalFilter.sqf"] call bnb_es_core_fnc_log;
 private _whitelist = [];
 switch (toLowerANSI _filter) do {
 	case "standard": { _whitelist = parseSimpleArray bnb_f_arsenal_whitelist_standard; };
@@ -38,7 +38,7 @@ switch (toLowerANSI _filter) do {
 if (_whitelist isEqualTo []) then {
 	_whitelist = true;
 	_filter = format["(was %1, now reset)", _filter];
-	[format["Arsenal Whitelist is empty. Filling Arsenal with everything instead. %1", _filter], "core\functions\fn_getArsenalFilter.sqf"] call bnb_es_core_fnc_log;
+	[format["Arsenal Whitelist is empty. Filling Arsenal with everything instead. %1", _filter], "core\functions\common\fn_getArsenalFilter.sqf"] call bnb_es_core_fnc_log;
 };
 
 _whitelist;

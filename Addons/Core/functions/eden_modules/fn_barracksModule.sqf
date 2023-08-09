@@ -34,7 +34,7 @@ if (_logic getVariable ["HasArsenal", false]) then {
 	{
 		[_x, [], true] call ace_arsenal_fnc_initBox;
 		[_x, _whitelist, true] call ace_arsenal_fnc_addVirtualItems;
-		[format["Added %1 filtered arsenal to %2", _whitelist, _x], "core\functions\fn_arsenal.sqf"] call oni_core_fnc_log;
+		[format["Added %1 filtered arsenal to %2", _whitelist, _x], "core\functions\common\fn_arsenal.sqf"] call oni_core_fnc_log;
 	} foreach _objects;
 };
 

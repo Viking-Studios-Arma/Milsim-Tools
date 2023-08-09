@@ -65,5 +65,10 @@ Be aware, that the names of the `.bisign` and `.bikey` files depend on the lates
 For standardisation between class names and to prevent any possible future conflicts with class names the following naming convention has been developed:
 - for code: ONI_Recon
 - for presentation: ONI Recon - {Addon Name}
+
+## Credits
+
+Thank you to Arend and the 2Bnb for a lot of the scripts i have modified and used in this mod for a lot of the cool features.
+
 </p>
 <br />

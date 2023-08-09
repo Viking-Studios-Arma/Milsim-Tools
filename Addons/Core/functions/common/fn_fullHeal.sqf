@@ -24,7 +24,7 @@ Author:
 params [["_objects", ObjNull, [objNull, []]]];
 
 if (_objects isEqualTo []) exitWith {
-	[format["Failed to apply Full Heal: No objects given! %1", _objects], "core\functions\fn_fullHeal.sqf"] call bnb_es_core_fnc_log;
+	[format["Failed to apply Full Heal: No objects given! %1", _objects], "core\functions\common\fn_fullHeal.sqf"] call bnb_es_core_fnc_log;
 };
 
 if (_objects isEqualTo objNull) then {
