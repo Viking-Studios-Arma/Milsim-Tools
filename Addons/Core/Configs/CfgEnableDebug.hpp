@@ -7,4 +7,4 @@ Description:
 Author:
 	Arend
 ---------------------------------------------------------------------------- */
-enableDebugConsole = 0;
+enableDebugConsole = 1;

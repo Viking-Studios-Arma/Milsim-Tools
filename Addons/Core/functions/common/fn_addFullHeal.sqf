@@ -38,7 +38,7 @@ private _action = [];
 		_action = [
 			"oni_core_fullHeal",
 			"Full Heal",
-			"\x\oni_core\core\img\red-cross.paa",
+			"x\oni_core\core\red-cross.paa",
 			{
 				[player, player] call ace_medical_treatment_fnc_fullHeal;
 				hint "Healed!";
