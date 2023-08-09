@@ -13,18 +13,18 @@ class zen_context_menu_actions {
 		icon = "\a3\ui_f\data\logos\a_64_ca.paa";
 		iconColor = [1,0.27,0,1];
 		condition = "!(_objects isEqualTo [])";
-		statement = "[_position, _objects] call bnb_es_core_fnc_addBarracks;";
+		statement = "[_position, _objects] call oni_core_fnc_addBarracks;";
 
 		class bnb_es_fullHeal {
 			displayName = "Add Full Heal";
 			icon = "x\vs_oni\core\red-cross.paa";
-			statement = "[_objects] remoteExec ['oni_core_fnc_fullHeal', 2];['Full Heal added!'] call bnb_es_core_fnc_notifyZeus;";
+			statement = "[_objects] remoteExec ['oni_core_fnc_fullHeal', 2];['Full Heal added!'] call oni_core_fnc_notifyZeus;";
 		};
 
 		class bnb_es_spectator {
 			displayName = "Add Spectator";
 			icon = "x\vs_oni\core\camera.paa";
-			statement = "[_objects] remoteExec ['bnb_es_core_fnc_addSpectator', 2];['Spectator added!'] call bnb_es_core_fnc_notifyZeus;";
+			statement = "[_objects] remoteExec ['oni_core_fnc_addSpectator', 2];['Spectator added!'] call oni_core_fnc_notifyZeus;";
 		};
 	};
 };

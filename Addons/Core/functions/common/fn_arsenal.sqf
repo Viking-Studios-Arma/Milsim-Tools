@@ -37,7 +37,7 @@ Author:
 params [["_filter", "", [""]], ["_objects", ObjNull, [objNull, []]]];
 
 if (_objects isEqualTo []) exitWith {
-	[format["Failed to apply %1 Arsenal: No object given! %2", _filter, _objects], "core\functions\common\fn_arsenal.sqf"] call bnb_es_core_fnc_log;
+	[format["Failed to apply %1 Arsenal: No object given! %2", _filter, _objects], "core\functions\common\fn_arsenal.sqf"] call oni_core_fnc_log;
 };
 
 if (_objects isEqualTo objNull) then {
@@ -54,5 +54,5 @@ private _whitelist = [_filter] call oni_core_fnc_getArsenalFilter;
 	[_x, true] call ace_arsenal_fnc_removeBox;
 	[_x, [], true] call ace_arsenal_fnc_initBox;
 	[_x, _whitelist, true] call ace_arsenal_fnc_addVirtualItems;
-	[format["Added %1 filtered arsenal to %2", _filter, _x], "core\functions\common\fn_arsenal.sqf"] call bnb_es_core_fnc_log;
+	[format["Added %1 filtered arsenal to %2", _filter, _x], "core\functions\common\fn_arsenal.sqf"] call oni_core_fnc_log;
 } forEach _objects;
