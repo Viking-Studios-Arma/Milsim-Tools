@@ -31,7 +31,7 @@ class display3DEN
 				};
 				class oni_core_settings {
 					text = "Load ONI Settings";
-					action = "['Are you sure you want to overwrite current settings with ONI defaults?', 'Load ONI Settings', ['Overwrite', {[] call oni_core_core_fnc_edenLoadSettings}], true] call BIS_fnc_3DENShowMessage";
+					action = "['Are you sure you want to overwrite current settings with ONI defaults?', 'Load ONI Settings', ['Overwrite', {[] call oni_core_fnc_edenLoadSettings}], true] call BIS_fnc_3DENShowMessage";
 				};
 				class oni_core_assets {
 					text = "Load ONI Slots & Modules";
