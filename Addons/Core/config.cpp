@@ -81,7 +81,7 @@ class Extended_PostInit_EventHandlers {
 #include "Configs\CfgEdenGUI.hpp"
 #include "configs\CfgEdenLoadouts.hpp"
 #include "configs\CfgEdenModules.hpp"
-//#include "configs\CfgEdenTools.hpp"
+#include "configs\CfgEdenTools.hpp"
 #include "configs\CfgEnableDebug.hpp"
 #include "configs\CfgLadderTweak.hpp"
 #include "configs\CfgMedicalEquipment.hpp"
