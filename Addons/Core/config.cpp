@@ -18,7 +18,7 @@ class CfgPatches {
 };
 
 class CfgFunctions {
-	class oni_core_core {
+	class oni_core {
 		class common {
 			file = "\x\vs_oni_c\core\functions\common";
 			class addDeployActions {};
@@ -36,8 +36,11 @@ class CfgFunctions {
 			class openTimerUI {};
 			class setRespawnTimer {};
 			class setDefaultLoadouts {};
+			class arsenal {};
+			class fullHeal {};
+			class getArsenalFilter {};
+			class teleport {};
 		};
-
 		class zeus_modules {
 			file = "\x\vs_oni_c\core\functions\zeus_modules";
 			class addBarracks {};
@@ -61,14 +64,15 @@ class CfgFunctions {
 };
 
 class Extended_PreInit_EventHandlers {
-	class oni_core_core_preInit {
+	class oni_core_preInit {
 		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_preInit.sqf'";
 	};
 };
 
 class Extended_PostInit_EventHandlers {
-	class oni_core_core_postInit {
+	class oni_core_postInit {
 		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_postInit.sqf'";
+		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_clientPreInit.sqf';";		
 	};
 };
 

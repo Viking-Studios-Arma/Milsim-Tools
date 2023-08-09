@@ -18,7 +18,7 @@ class zen_context_menu_actions {
 		class bnb_es_fullHeal {
 			displayName = "Add Full Heal";
 			icon = "x\vs_oni\core\red-cross.paa";
-			statement = "[_objects] remoteExec ['bnb_f_core_fnc_fullHeal', 2];['Full Heal added!'] call bnb_es_core_fnc_notifyZeus;";
+			statement = "[_objects] remoteExec ['oni_core_fnc_fullHeal', 2];['Full Heal added!'] call bnb_es_core_fnc_notifyZeus;";
 		};
 
 		class bnb_es_spectator {
