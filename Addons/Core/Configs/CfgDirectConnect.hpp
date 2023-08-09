@@ -1,5 +1,5 @@
 class CfgMainMenuSpotlight {
-	class ONI_Core_Main_server {
+	class VS_ONI_C_Main_server {
 		text = "Main Ops Server";
 		textIsQuote = 0;
 		picture = "x\VS_ONI_C\Core\image\ONI_Recon.paa";
@@ -8,7 +8,7 @@ class CfgMainMenuSpotlight {
 		actionText = "Connect to Main Server";
 		condition = true;
 	};
-	class ONI_Core_HM_server { // for the hearts and minds enjoyers
+	class VS_ONI_C_HM_server { // for the hearts and minds enjoyers
 		text = "Hearts and Minds Server";
 		textIsQuote = 0;
 		picture = "x\VS_ONI_C\Core\image\ONI_Recon.paa";
