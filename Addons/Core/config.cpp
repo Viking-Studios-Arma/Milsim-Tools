@@ -1,5 +1,5 @@
 class CfgPatches {
-	class ONI_core {
+	class ONI_Recon_core {
 		// Addon identity
 		name = "ONI Recon - Core";
 		author = "Viking Studios";
