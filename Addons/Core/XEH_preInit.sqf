@@ -43,6 +43,7 @@ private _oni_core_settings = [
 		},
 		true
 	]
+
 ];
 
 {_x call CBA_Settings_fnc_init;} forEach _oni_core_settings;

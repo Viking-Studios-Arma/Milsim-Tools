@@ -38,7 +38,7 @@ private _action = [];
 		_action = [
 			"oni_core_spectate",
 			"Spectate",
-			"x\oni_core\core\camera.paa",
+			"\x\vs_oni_c\core\img\camera.paa",
 			{[true, false, false] call ace_spectator_fnc_setSpectator;},
 			{true}
 		] call ace_interact_menu_fnc_createAction;

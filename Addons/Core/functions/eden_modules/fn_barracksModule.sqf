@@ -29,7 +29,7 @@ if (!isServer) exitWith {
 };
 
 if (_logic getVariable ["HasArsenal", false]) then {
-	private _whitelist = [_logic getVariable ["ArsenalFilter", ""]] call bnb_f_core_fnc_getArsenalFilter;
+	private _whitelist = [_logic getVariable ["ArsenalFilter", ""]] call oni_f_core_fnc_getArsenalFilter;
 
 	{
 		[_x, [], true] call ace_arsenal_fnc_initBox;
@@ -39,7 +39,7 @@ if (_logic getVariable ["HasArsenal", false]) then {
 };
 
 if (_logic getVariable ["HasFullHeal", false]) then {
-	[_objects] call bnb_f_core_fnc_fullHeal;
+	[_objects] call oni_f_core_fnc_fullHeal;
 };
 
 [format["Loading Spectator? %1, with %2", _logic getVariable ["HasSpectator", false], _objects], "core\functions\eden_modules\fn_barracksModule.sqf"] call oni_core_fnc_log;
