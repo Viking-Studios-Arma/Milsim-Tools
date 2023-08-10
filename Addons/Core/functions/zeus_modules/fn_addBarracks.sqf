@@ -103,11 +103,11 @@ _dialogParameters = _dialogParameters + [["_hasSpectator", false]];
 	};
 
 
-	// Add Arsenal - Remotely, since only the server has ONI Framework loaded
-	[_filter, _objects] remoteExec ["bnb_f_core_fnc_arsenal", 2];
+	// Add Arsenal 
+	[_filter, _objects] remoteExec ["oni_core_fnc_arsenal", 2];
 
 	if (_hasFullHeal) then {
-		[_objects] remoteExec ["bnb_f_core_fnc_fullHeal", 2];
+		[_objects] remoteExec ["oni_core_fnc_fullHeal", 2];
 	};
 
 	if (_hasSpectator) then {

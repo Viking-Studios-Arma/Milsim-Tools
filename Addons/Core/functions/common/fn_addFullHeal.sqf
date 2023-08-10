@@ -22,7 +22,7 @@ Author:
 params [["_objects", objNull, [objNull, []]]];
 
 if (_objects isEqualTo objNull || _objects isEqualTo []) exitWith {
-	[format["Failed to apply Full Heal interaction: No object given! %1", _objects], "core\functions\common\fn_addFullHeal.sqf"] call oni_core_fnc_log;
+	[format["Failed to apply Full Heal interaction: No object given! %1", _objects], "core\functions\common\fn_FullHeal.sqf"] call oni_core_fnc_log;
 };
 
 if (typeName _objects isEqualTo "OBJECT") then {
@@ -38,7 +38,7 @@ private _action = [];
 		_action = [
 			"oni_core_fullHeal",
 			"Full Heal",
-			"x\oni_core\core\red-cross.paa",
+			"\x\oni_core\core\red-cross.paa",
 			{
 				[player, player] call ace_medical_treatment_fnc_fullHeal;
 				hint "Healed!";

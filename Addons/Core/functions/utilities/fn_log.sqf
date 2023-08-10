@@ -23,10 +23,10 @@ params [["_message", "No Message", []], ["_fileName", "N/A", []]];
 
 if (oni_core_debug) then {
 	if (_fileName isEqualTo "N/A") then {
-		systemChat (format["[2BNB Debug] %1", _message]);
-		diag_log format["[2BNB Debug] %1", _message];
+		systemChat (format["[ONI Debug] %1", _message]);
+		diag_log format["[ONI Debug] %1", _message];
 	} else {
-		systemChat (format["[2BNB Debug] [%1] %2", _fileName, _message]);
-		diag_log format["[2BNB Debug] [%1] %2", _fileName, _message];
+		systemChat (format["[ONI Debug] [%1] %2", _fileName, _message]);
+		diag_log format["[ONI Debug] [%1] %2", _fileName, _message];
 	};
 };

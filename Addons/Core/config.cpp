@@ -32,13 +32,13 @@ class CfgFunctions {
 			class isCurator {};
 			class listDeadPlayers {};
 			class notifyZeus {};
-			class openTimerUI {};
-			class setRespawnTimer {};
 			class setDefaultLoadouts {};
 			class arsenal {};
 			class fullHeal {};
 			class getArsenalFilter {};
 			class teleport {};
+			class openTimerUI {};
+			class setRespawnTimer {};
 		};
 
 		class zeus_modules {

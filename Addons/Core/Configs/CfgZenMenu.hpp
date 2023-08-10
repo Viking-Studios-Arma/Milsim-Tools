@@ -17,13 +17,13 @@ class zen_context_menu_actions {
 
 		class oni_core_fullHeal {
 			displayName = "Add Full Heal";
-			icon = "x\oni_core\core\red-cross.paa";
-			statement = "[_objects] remoteExec ['bnb_f_core_fnc_fullHeal', 2];['Full Heal added!'] call oni_core_fnc_notifyZeus;";
+			icon = "\x\vs_oni_c\core\img\red-cross.paa";
+			statement = "[_objects] remoteExec ['oni_core_fnc_fullHeal', 2];['Full Heal added!'] call oni_core_fnc_notifyZeus;";
 		};
 
 		class oni_core_spectator {
 			displayName = "Add Spectator";
-			icon = "x\oni_core\core\camera.paa";
+			icon = "\x\vs_oni_c\core\img\camera.paa";
 			statement = "[_objects] remoteExec ['oni_core_fnc_addSpectator', 2];['Spectator added!'] call oni_core_fnc_notifyZeus;";
 		};
 	};

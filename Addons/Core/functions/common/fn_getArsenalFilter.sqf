@@ -26,10 +26,10 @@ params [["_filter", "", [""]]];
 private _whitelist = [];
 switch (toLowerANSI _filter) do {
 	case "standard": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_standard; };
-	case "multicam": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_multicam; };
-	case "desert": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_desert; };
+	case "black": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_black; };
+	case "marine": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_marine; };
 	case "woodland": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_woodland; };
-	case "historic": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_historic; };
+	case "urban": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_urban; };
 	case "mission": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_mission; };
 	default { _whitelist = true; };
 };
