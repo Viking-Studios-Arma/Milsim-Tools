@@ -150,7 +150,7 @@ class oni_core_edenGUI {
 		};
 		class oni_core_title: RscText {
 			idc = 1004;
-			text = "Load 2BNB Slots & Modules";
+			text = "Load ONI Slots & Modules";
 			x = 0.112499;
 			y = 0.04;
 			w = 0.554999;

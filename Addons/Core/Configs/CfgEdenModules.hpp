@@ -72,24 +72,24 @@ class CfgVehicles {
 						name = "Standard";
 						value = "standard";
 					};
-					class Multicam {
-						// MTP
-						name = "Multicam";
-						value = "multicam";
+					class Black {
+						// black
+						name = "Black";
+						value = "Black";
 					};
-					class Desert {
-						//desert DDPM
-						name = "Desert";
-						value = "desert";
+					class Marine {
+						//Marine
+						name = "Marine";
+						value = "Marine";
 					};
 					class Tropical {
-						//woodland tropical DPMW
+						//woodland
 						name = "Woodland";
 						value = "woodland";
 					};
-					class Historic {
-						name = "Historic";
-						value = "historic";
+					class Urban {
+						name = "Urban";
+						value = "Urban";
 					};
 					class Mission {
 						name = "Mission";
