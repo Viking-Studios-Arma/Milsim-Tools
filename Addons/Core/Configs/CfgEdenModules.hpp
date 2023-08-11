@@ -69,7 +69,7 @@ class CfgVehicles {
 					};
 					class Standard {
 						// all camo kits
-						name = "Standard [ONI]";
+						name = "Standard";
 						value = "standard";
 					};
 					class Mission {
