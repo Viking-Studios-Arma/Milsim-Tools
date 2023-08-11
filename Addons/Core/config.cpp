@@ -66,6 +66,7 @@ class CfgFunctions {
 class Extended_PreInit_EventHandlers {
 	class oni_core_preInit {
 		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_preInit.sqf'";
+		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_clientPreInit.sqf'";
 	};
 };
 
