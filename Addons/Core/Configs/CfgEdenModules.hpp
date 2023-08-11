@@ -69,27 +69,8 @@ class CfgVehicles {
 					};
 					class Standard {
 						// all camo kits
-						name = "Standard";
+						name = "Standard [ONI]";
 						value = "standard";
-					};
-					class Black {
-						// black
-						name = "Black";
-						value = "Black";
-					};
-					class Marine {
-						//Marine
-						name = "Marine";
-						value = "Marine";
-					};
-					class Tropical {
-						//woodland
-						name = "Woodland";
-						value = "woodland";
-					};
-					class Urban {
-						name = "Urban";
-						value = "Urban";
 					};
 					class Mission {
 						name = "Mission";

@@ -19,13 +19,17 @@ Examples:
 
 Author:
 	Arend
+
+Modified:
+	Carmichael
+
 ---------------------------------------------------------------------------- */
 params [["_filter", "", [""]]];
 
 [format["Getting whitelists for filter %1", _filter], "core\functions\common\fn_getArsenalFilter.sqf"] call oni_core_fnc_log;
 private _whitelist = [];
 switch (toLowerANSI _filter) do {
-	case "standard": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_Standard; };
+	case "standard": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_standard; };
 	case "mission": { _whitelist = parseSimpleArray oni_core_arsenal_whitelist_mission; };
 	default { _whitelist = true; };
 };
