@@ -29,17 +29,17 @@ if (!isServer) exitWith {
 };
 
 if (_logic getVariable ["HasArsenal", false]) then {
-	private _whitelist = [_logic getVariable ["ArsenalFilter", ""]] call oni_f_core_fnc_getArsenalFilter;
+	private _whitelist = [_logic getVariable ["ArsenalFilter", ""]] call oni_core_fnc_getArsenalFilter;
 
 	{
 		[_x, [], true] call ace_arsenal_fnc_initBox;
 		[_x, _whitelist, true] call ace_arsenal_fnc_addVirtualItems;
-		[format["Added %1 filtered arsenal to %2", _whitelist, _x], "core\functions\fn_arsenal.sqf"] call oni_core_fnc_log;
+		[format["Added %1 filtered arsenal to %2", _whitelist, _x], "core\functions\common\fn_arsenal.sqf"] call oni_core_fnc_log;
 	} foreach _objects;
 };
 
 if (_logic getVariable ["HasFullHeal", false]) then {
-	[_objects] call oni_f_core_fnc_fullHeal;
+	[_objects] call oni_core_fnc_fullHeal;
 };
 
 [format["Loading Spectator? %1, with %2", _logic getVariable ["HasSpectator", false], _objects], "core\functions\eden_modules\fn_barracksModule.sqf"] call oni_core_fnc_log;

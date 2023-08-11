@@ -104,10 +104,10 @@ _dialogParameters = _dialogParameters + [["_hasSpectator", false]];
 
 
 	// Add Arsenal 
-	[_filter, _objects] remoteExec ["oni_f_core_fnc_arsenal", 2];
+	[_filter, _objects] remoteExec ["oni_core_fnc_arsenal", 2];
 
 	if (_hasFullHeal) then {
-		[_objects] remoteExec ["oni_f_core_fnc_fullHeal", 2];
+		[_objects] remoteExec ["oni_core_fnc_fullHeal", 2];
 	};
 
 	if (_hasSpectator) then {
