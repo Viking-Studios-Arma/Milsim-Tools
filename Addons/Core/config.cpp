@@ -35,6 +35,8 @@ class CfgFunctions {
 			class setDefaultLoadouts {};
 			class openTimerUI {};
 			class setRespawnTimer {};
+			class getArsenalFilter {};
+			class Arsenal {};
 		};
 
 		class zeus_modules {
