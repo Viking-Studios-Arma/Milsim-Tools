@@ -15,7 +15,7 @@ _sourceposition = player getVariable "SourceObjectSpawner";
 _spawnPos = nil;
 _spawnObject = _sourceposition getVariable "SpawnPosObject";
 _spawnDir = nil;
-if (isNil "_spawnObject") then {_spawnpos = _sourceposition modelToWorld [0,-30,0]; _spawnDir = 0;} else {_spawnpos = getPos _spawnObject; _spawnDir = getDir _spawnObject; };
+if (isNil "_spawnObject") then {_spawnpos = _sourceposition modelToWorld [-10,0,0]; _spawnDir = 180;} else {_spawnpos = getPos _spawnObject; _spawnDir = getDir _spawnObject; };
 
 waitUntil {!isNil "_spawnpos"};
 ///////clear spawn
@@ -39,8 +39,9 @@ hint localize "STR_MRH_SPAWNER_GENERATING4";
 };
 waitUntil {scriptDone _erasing};
 ////create new vehicle
-_veh = _type createVehicle _spawnpos;
+_veh = _type createVehicle [0,0,0];
 _veh setDir _spawnDir;
+_veh setPos _spawnPos;
 _veh setVariable ["isMRHSpawnerCreatedVehicle", true, true];
 hint localize "STR_MRH_SPAWNER_VEHCREATED";
 };
