@@ -12,7 +12,7 @@ class MRHSpawner
 class MRHSpawnerLaptop: RscPictureMRHSpawner
 {
 	idc = 1200;
-	text = "x\vs_oni_c\MRHVehicleSpawner\paa\laptop.paa";
+	text = "\MRHVehicleSpawner\paa\laptop.paa";
 	x = 0.00125001 * safezoneW + safezoneX;
 	y = -0.00399999 * safezoneH + safezoneY;
 	w = 0.9975 * safezoneW;

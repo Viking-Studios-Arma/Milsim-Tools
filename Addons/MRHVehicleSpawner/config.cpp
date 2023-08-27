@@ -3,17 +3,17 @@ class CfgPatches {
 		units[] = {}; //
 		weapons[] = {}; //
 		requiredVersion = 0.1; //
-		requiredAddons[] = {""}; //
+		requiredAddons[] = {"MRHMilsimTools"}; //
 	};
 };
 
-#include "x\vs_oni_c\MRHVehicleSpawner\DialogsHPP\definesSPAWNER.hpp"
-#include "x\vs_oni_c\MRHVehicleSpawner\DialogsHPP\dialogsSPAWNER.hpp"
+#include "DialogsHPP\definesSPAWNER.hpp"
+#include "DialogsHPP\dialogsSPAWNER.hpp"
 
 /////=========cfgFunctions========
 class CfgFunctions
 {
-	#include "x\vs_oni_c\MRHVehicleSpawner\cfghpp\cfgfunctions.hpp"
+	#include "cfgHPP\cfgfunctions.hpp"
 };
 ////=============fincfgFunctions
 ////=============fincfgFunctions
@@ -21,6 +21,6 @@ class Extended_PreInit_EventHandlers
 {
    class MRHSpawnerInit
    {
-      serverInit = "call compile preProcessFileLineNumbers 'x\vs_oni_c\MRHVehicleSpawner\Functions\fn_Spawner_SpawnerInit.sqf'";
+      serverInit = "call compile preProcessFileLineNumbers '\MRHVehicleSpawner\Functions\fn_Spawner_SpawnerInit.sqf'";
    };
 };

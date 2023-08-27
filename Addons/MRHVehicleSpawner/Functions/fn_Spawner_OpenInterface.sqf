@@ -13,9 +13,9 @@ createdialog "MRHSpawner";
 /////////////////////
 disableserialization;
 //////////sets defaultpic
-_pic = "x\vs_oni_c\MRHVehicleSpawner\Paa\welcome.paa";
+_pic = "\MRHVehicleSpawner\Paa\welcome.paa";
 ((findDisplay 2121) displayCtrl 1201) ctrlSetText _pic;
-_icon = "x\vs_oni_c\MRHVehicleSpawner\Paa\mrhmodsLOGO.paa";
+_icon = "\MRHVehicleSpawner\Paa\mrhmodsLOGO.paa";
 ((findDisplay 2121) displayCtrl 1203) ctrlSetText _icon;
 
 

@@ -1,11 +1,11 @@
 
-class ONI_core_VS // Defines the "owner"
+class MRH // Defines the "owner"
 {
 	
-	class ONI_Vehicle_Spawner // category
+		class MRHSpawnerFunctions // category
 	{
-	tag = "ONI Vehicle Spawner";
-	file = "x\vs_oni_c\MRHVehicleSpawner\Functions";
+	tag = "MRH";
+	file = "\MRHVehicleSpawner\Functions";
 	    class Spawner_OpenInterface
 		{};
 		class Spawner_Refresh		//class myfunction
