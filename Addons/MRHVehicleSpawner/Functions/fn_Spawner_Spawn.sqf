@@ -1,6 +1,6 @@
 /*
 Function name: MRH_fnc_Spawn
-Author: Mr H.
+Author: Mr H. Modified by Carmichael
 Description: Spawns selected Vehicle
 Return value: none
 Public: No
@@ -15,7 +15,7 @@ _sourceposition = player getVariable "SourceObjectSpawner";
 _spawnPos = nil;
 _spawnObject = _sourceposition getVariable "SpawnPosObject";
 _spawnDir = nil;
-if (isNil "_spawnObject") then {_spawnpos = _sourceposition modelToWorld [-10,0,0]; _spawnDir = 180;} else {_spawnpos = getPos _spawnObject; _spawnDir = getDir _spawnObject; };
+if (isNil "_spawnObject") then {_spawnpos = _sourceposition modelToWorld [-15,0,0]; _spawnDir = 180;} else {_spawnpos = getPos _spawnObject; _spawnDir = getDir _spawnObject; };
 
 waitUntil {!isNil "_spawnpos"};
 ///////clear spawn
@@ -41,7 +41,10 @@ waitUntil {scriptDone _erasing};
 ////create new vehicle
 _veh = _type createVehicle [0,0,0];
 _veh setDir _spawnDir;
+_veh allowdamage false; //Temp disable Damage on spawned vehicles because Arma be Arma
 _veh setPos _spawnPos;
+sleep 1;
+_veh allowdamage true; // Re-Enables damage
 _veh setVariable ["isMRHSpawnerCreatedVehicle", true, true];
 hint localize "STR_MRH_SPAWNER_VEHCREATED";
 };
