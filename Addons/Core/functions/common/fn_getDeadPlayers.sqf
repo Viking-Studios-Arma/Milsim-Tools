@@ -19,6 +19,7 @@ Examples:
 
 Author:
 	Arend
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 private _deadPlayers = [[],[],[],[]];
 private _sideReference = [WEST, EAST, RESISTANCE, CIVILIAN];

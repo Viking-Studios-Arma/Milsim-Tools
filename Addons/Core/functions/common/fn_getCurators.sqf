@@ -15,6 +15,7 @@ Examples:
 
 Author:
 	Arend
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 private _curator = objNull;
 private _curators = [];

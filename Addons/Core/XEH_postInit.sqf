@@ -1,3 +1,6 @@
+/*
+License GPL-2.0
+*/
 [] spawn {
 	// Suspend the whole damn thing until the required CBA Settings are available
 	waitUntil {

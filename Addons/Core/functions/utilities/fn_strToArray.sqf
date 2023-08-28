@@ -18,6 +18,7 @@ Examples:
 Author:
 	Arend
 	JSHOCK
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 params [["_in","",[""]],["_removeWhitespace",true,[false]]];
 private _str = _in splitString ",";

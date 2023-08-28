@@ -6,6 +6,8 @@ Description:
 
 Author:
 	Arend
+
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 class zen_context_menu_actions {
 	class oni_core_barracksFunction {

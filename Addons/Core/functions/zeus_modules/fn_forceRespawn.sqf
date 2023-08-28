@@ -17,6 +17,7 @@ Examples:
 Author:
 	Ford
 	Arend
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 {
 	setPlayerRespawnTime 0;

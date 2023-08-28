@@ -7,6 +7,8 @@ Description:
 
 Author:
 	Arend
+
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 class ACE_ZeusActions {
 	class ONI_CORE_Zeus_Tools {

@@ -18,6 +18,7 @@ Author:
 	Arend
 	CreepPork_LV
 	Anton Struyk
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 params [["_message", "No Message", []], ["_fileName", "N/A", []]];
 

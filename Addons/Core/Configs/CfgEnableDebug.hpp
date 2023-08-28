@@ -6,5 +6,6 @@ Description:
 
 Author:
 	Arend
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 enableDebugConsole = 0;

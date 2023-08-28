@@ -7,6 +7,8 @@ Description:
 
 Author:
 	Arend
+License GPL-2.0
+
 ---------------------------------------------------------------------------- */
 #define ADD_ACTIONS(parent, child) \
 class child : parent { \

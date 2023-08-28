@@ -5,6 +5,8 @@ Description:
 	Registers 3DEN Modules to be used by our mission makers to
 	make their lives easier.
 
+License GPL-2.0
+
 Author:
 	Arend
 ---------------------------------------------------------------------------- */

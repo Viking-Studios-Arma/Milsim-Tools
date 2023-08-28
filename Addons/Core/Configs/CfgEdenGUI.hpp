@@ -1,3 +1,4 @@
+/*License GPL-2.0*/
 class oni_core_edenGUI {
 	idd = 1901;
 	movingEnable = 1;

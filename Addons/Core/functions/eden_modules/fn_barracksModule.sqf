@@ -16,6 +16,7 @@ Examples:
 
 Author:
 	Arend
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 params [["_logic", objNull, [objNull]], ["_objects", [], [[]]]];
 [format["_logic: %1 :: _objects:", _logic, _objects], "core\functions\eden_modules\fn_barracksModule.sqf"] call oni_core_fnc_log;

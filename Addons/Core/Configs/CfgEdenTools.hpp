@@ -1,3 +1,4 @@
+/*License GPL-2.0*/
 #define BLACK_ASTEAMLEADER "ONI_Recon_SF_Team_Leader"
 #define BLACK_TEAMLEADER "ONI_Recon_SF_Team_Leader"
 #define BLACK_MEDIC "ONI_Recon_SF_Medic"
