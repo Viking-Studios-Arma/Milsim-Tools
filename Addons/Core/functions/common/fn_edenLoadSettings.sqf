@@ -15,6 +15,7 @@ Examples:
 
 Author:
 	Met
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 set3DENMissionAttributes
 [

@@ -6,6 +6,8 @@ Description:
 
 Author:
 	Arend
+License GPL-2.0
+
 ---------------------------------------------------------------------------- */
 class CfgWeapons {
 	class ACE_ItemCore;

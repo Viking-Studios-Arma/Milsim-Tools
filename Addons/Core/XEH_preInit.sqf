@@ -1,3 +1,6 @@
+/*
+License GPL-2.0
+*/
 private _oni_core_settings = [
     [
 		"oni_core_debug",

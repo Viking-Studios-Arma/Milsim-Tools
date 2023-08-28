@@ -70,5 +70,14 @@ For standardisation between class names and to prevent any possible future confl
 
 Thank you to Arend and the 2Bnb for a lot of the scripts i have modified and used in this mod for a lot of the cool features.
 
+MRHMilsimTools for providing the base for the ONI Vehicle Spawner
+
+## License Adjustments to be in line with Requirements from above Credits
+
+ONIVehicleSpawner is released under APL-SA
+
+Admin_Messages and Anything in Core which has 2BNB or Arend as an author is release under GPL2.0 (This will be specified in each file)
+
+
 </p>
 <br />

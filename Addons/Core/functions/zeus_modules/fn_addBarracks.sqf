@@ -17,6 +17,7 @@ Examples:
 
 Author:
 	Arend
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull, []]]];
 
@@ -30,20 +31,12 @@ if (_objects isEqualType objNull) then {
 private _availableFilters = [
 	"",
 	"standard",
-	"black",
-	"marine",
-	"urban",
-	"woodland",
 	"mission"
 ];
 
 private _availableFilterNames = [
 	["Full", "Unlimited Arsenal!"],
 	["Standard", "All Camo ONI equipment"],
-	["Black", "ONI equipment"],
-	["Marine", "ONI equipment"],
-	["Urban", "ONI equipment"],
-	["Woodland", "ONI equipment"],
 	"Mission"
 ];
 

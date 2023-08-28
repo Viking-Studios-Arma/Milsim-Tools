@@ -18,6 +18,7 @@ Examples:
 Author:
 	mharis001
 	Arend
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 /*
 Converted #defines:

@@ -19,6 +19,7 @@
 
 	Author:
 	Met
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 params [["_callsign", "Raider", [""]], ["_zeusCallsign", "Monarch", [""]], ["_camo", "MTP", [""]], ["_numberOfSections", 3, [0]], ["_createDefaults", false, [false]]];
 

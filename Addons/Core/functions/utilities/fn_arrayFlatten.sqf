@@ -20,6 +20,7 @@ Examples:
 
 Author:
 	KillzoneKid
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 private ["_res", "_fnc"];
 _res = [];

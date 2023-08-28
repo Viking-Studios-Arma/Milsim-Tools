@@ -1,3 +1,4 @@
+/*License GPL-2.0*/
 #define CT_STATIC           0
 #define CT_BUTTON           1
 #define CT_EDIT             2

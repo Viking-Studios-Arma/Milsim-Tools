@@ -1,3 +1,4 @@
+/*License GPL-2.0*/
 class Cfg3DEN
 {
 	class Object

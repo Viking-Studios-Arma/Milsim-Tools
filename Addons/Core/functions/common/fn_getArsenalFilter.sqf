@@ -20,9 +20,7 @@ Examples:
 Author:
 	Arend
 
-Modified:
-	Carmichael
-
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 params [["_filter", "", [""]]];
 

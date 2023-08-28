@@ -18,6 +18,8 @@ Examples:
 
 Author:
 	Arend
+
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 params [["_objects", objNull, [objNull, []]]];
 

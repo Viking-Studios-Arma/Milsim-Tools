@@ -6,6 +6,7 @@ Description:
 
 Author:
 	Arend
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 class CfgMovesBasic;
 class CfgMovesMaleSdr : CfgMovesBasic {

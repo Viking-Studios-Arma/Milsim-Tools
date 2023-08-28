@@ -6,6 +6,7 @@ Description:
 
 Author:
 	Arend
+License GPL-2.0
 ---------------------------------------------------------------------------- */
 class CfgVehicles {
 	class Man;
