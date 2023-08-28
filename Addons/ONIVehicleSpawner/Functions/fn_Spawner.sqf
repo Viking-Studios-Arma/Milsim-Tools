@@ -19,7 +19,7 @@ or
 
 _checkParams = params ["_object","_spawnPosObject",["_Type", "All", ["All", "Air", "Land","Sea"]]];
 
-[_object] execVM "\ONIVehicleSpawner\scripts\scr_aceAddaction.sqf";
+[_object] execVM "x\vs_oni_c\spawner\scripts\scr_aceAddaction.sqf";
 
 
 if !(isNil "_spawnPosObject") then { _object setVariable ["SpawnPosObject", _spawnPosObject, true]};

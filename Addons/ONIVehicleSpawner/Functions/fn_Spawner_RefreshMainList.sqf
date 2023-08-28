@@ -45,7 +45,7 @@ _dlc = gettext (configfile >> "CfgVehicles" >> _x >> "dlc");
 _dlcPic = gettext (configfile >> "CfgMods" >> _dlc >> "logo");
 _faction = gettext (configfile >> "CfgVehicles" >> _x >> "faction");
 if (_dlc == "") then {_dlc = "Vanilla";
-_dlcPic = "\oniVehicleSpawner\Paa\arma3.paa";};
+_dlcPic = "x\vs_oni_c\spawner\Paa\arma3.paa";};
 //if (_dlc == "All") then {_name = "All";};
 ///redefinescategories accordinglywith usersettings
 _DLCFinal = [];

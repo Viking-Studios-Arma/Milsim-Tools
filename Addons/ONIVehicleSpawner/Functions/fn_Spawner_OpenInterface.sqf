@@ -13,9 +13,9 @@ createdialog "oniSpawner";
 /////////////////////
 disableserialization;
 //////////sets defaultpic
-_pic = "\oniVehicleSpawner\Paa\welcome.paa";
+_pic = "x\vs_oni_c\spawner\Paa\welcome.paa";
 ((findDisplay 2121) displayCtrl 1201) ctrlSetText _pic;
-_icon = "\oniVehicleSpawner\Paa\onimodsLOGO.paa";
+_icon = "x\vs_oni_c\spawner\Paa\VSlogo.paa";
 ((findDisplay 2121) displayCtrl 1203) ctrlSetText _icon;
 
 

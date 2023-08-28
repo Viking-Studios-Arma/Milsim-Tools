@@ -10,7 +10,7 @@ _loc = localize "STR_ONI_SPAWNER_ACEOPEN";
 _action =
 ["SpawnAirShip", 
 _loc,
- "\ONIVehicleSpawner\Paa\iconespawner.paa", 
+ "x\vs_oni_c\spawner\Paa\iconespawner.paa", 
  
 _statement 
 

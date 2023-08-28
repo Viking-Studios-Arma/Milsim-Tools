@@ -12,6 +12,6 @@ call oni_core_fnc_Spawner_SelectType;
 params ["_selected"];
 _ctrlcombo = ((findDisplay 2121) displayCtrl 2100);
 _onivalue = _ctrlcombo lbData _selected;
-player setVariable ["oni_core_SpawnerUSERSELECTEDVEHICLETYPE", _onivalue];
+player setVariable ["oni_spawnerUSERSELECTEDVEHICLETYPE", _onivalue];
 call oni_core_fnc_Spawner_FilterAll;
 call oni_core_fnc_Spawner_RefreshMainList;

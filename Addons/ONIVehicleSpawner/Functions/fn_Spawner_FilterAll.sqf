@@ -24,7 +24,7 @@ case (_Type == "Sea") : {{if (_x isKindOf "Boat_F" or _x isKindOf "Ship_F") then
 case (_Type == "All") : {_resultingArray = _allvehiclesArray};
 };
 
-_selectedType = player getVariable "oni_SpawnerUSERSELECTEDVEHICLETYPE";
+_selectedType = player getVariable "oni_spawnerUSERSELECTEDVEHICLETYPE";
 if !(isNil "_selectedType") then {
 _selectedTypeARRAY = [];
 
