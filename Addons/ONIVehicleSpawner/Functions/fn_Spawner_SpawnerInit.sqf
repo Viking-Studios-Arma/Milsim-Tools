@@ -9,7 +9,7 @@ Example:
 call oni_core_fnc_Spawner_SpawnerInit;
 (called upon clien int through cba preInit event handlers)
 */
-if !(isServer) exitWith {}; //leave processing to the server
+
 /////////////General List finds all vehicles in all cfgs
 [] spawn {
 	// Suspend the whole damn thing until the required CBA Settings are available
