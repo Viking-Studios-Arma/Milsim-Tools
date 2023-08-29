@@ -40,7 +40,7 @@ hint localize "STR_ONI_SPAWNER_GENERATING4";
 };
 waitUntil {scriptDone _erasing};
 ////create new vehicle
-_veh = _type createVehicle [0,0,1000];
+_veh = createVehicle [_type, [0,0,1000 + random 1000], [], 0, "CAN_COLLIDE"];
 _veh setDir _spawnDir;
 _veh allowdamage false; //Temp disable Damage on spawned vehicles because Arma be Arma
 _veh setPos _spawnPos;
