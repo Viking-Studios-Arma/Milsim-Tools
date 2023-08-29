@@ -10,6 +10,7 @@ call ONI_fnc_Spawner_Spawn;
 */
 
 [] Spawn {
+_uav = ["ONI_Recon_MQ94","ONI_Recon_MQ221","ONI_Recon_ED_1D","ONI_Recon_ED_1E"];
 _type = uinamespace getVariable "ONI_Spawner_tospawnclassname";
 _sourceposition = player getVariable "SourceObjectSpawner";
 _spawnPos = nil;
@@ -43,6 +44,7 @@ _veh = _type createVehicle [0,0,0];
 _veh setDir _spawnDir;
 _veh allowdamage false; //Temp disable Damage on spawned vehicles because Arma be Arma
 _veh setPos _spawnPos;
+if ((_veh isKindOf "UAV") || ((TypeOf _veh) in _uav)) then {createVehicleCrew _veh};
 sleep 1;
 _veh allowdamage true; // Re-Enables damage
 _veh setVariable ["isONISpawnerCreatedVehicle", true, true];
