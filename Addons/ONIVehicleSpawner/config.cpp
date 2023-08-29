@@ -17,9 +17,9 @@ class CfgFunctions
 };
 ////=============fincfgFunctions
 ////=============fincfgFunctions
-class Extended_PreInit_EventHandlers
+class Extended_PostInit_EventHandlers
 {
-   class ONISpawnerInit
+   class ONI_Core_Spawner_PostInit
    {
       Init = "call compile preProcessFileLineNumbers 'x\vs_oni_c\spawner\Functions\fn_Spawner_SpawnerInit.sqf'";
    };

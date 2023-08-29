@@ -11,7 +11,12 @@ call oni_core_fnc_Spawner_SpawnerInit;
 */
 if !(isServer) exitWith {}; //leave processing to the server
 /////////////General List finds all vehicles in all cfgs
-
+[] spawn {
+	// Suspend the whole damn thing until the required CBA Settings are available
+	waitUntil {
+		sleep 0.5;
+		!(isNil "cba_settings_ready")
+	};
 _allVehicleConfigs = "true" configClasses (configFile >> "CfgVehicles");
 _allVehicleConfigNames = _allVehicleConfigs apply {configName _x};
 
@@ -75,6 +80,6 @@ _FactionsArray = [];
 	};
 } forEach _FactionsArray;
 missionNameSpace setVariable ["SPAWNER_FactionsList", _FactionsArray,true];
-
+};
 call oni_core_fnc_Spawner_SortFactionsAlgo;
 
