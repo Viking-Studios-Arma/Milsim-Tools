@@ -11,9 +11,9 @@ call oni_core_fnc_Spawner_UserSelectedDLC;
 
 params ["_selected"];
 _ctrlcombo = ((findDisplay 2121) displayCtrl 2101);
-_MRHvalue = _ctrlcombo lbData _selected;
+_onivalue = _ctrlcombo lbData _selected;
 _array = [];
-_array pushBack _MRHvalue;
+_array pushBack _onivalue;
 
 player setVariable ["userSelectedDLC", _array];
 call oni_core_fnc_Spawner_RefreshMainList;
