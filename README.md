@@ -25,23 +25,30 @@
 	</a>
 </p>
 
-<p align="center"><sup><strong>Introducing a new Non-Canon UNSC ONI Faction to OPTRE and making life easier for members of ONI Recon.</strong></sup></p>
+<p>
+
+Adding much-needed functionality to the Arma 3 game for the ONI Recon group through a collection of open-source scripts we have permission to use/upload and scripts we have made or built upon. Other Groups/Communities are welcome to use this mod for the added functionality.
+
+Features include;
+- Admin Messages
+- 3den + Zeus ACE Arsenal Barracks Module with CBA Settings for whitelist
+- - With Spectator + Full Heal Options
+- Vehicle Spawner
+- Tinters Furniture spawner, Populates buildings in players' proximity/View distance with furniture and deletes them once out of view (MP Sync enabled so everyone sees the same stuff)
+- Vehicle Deploy actions via ACE (Deploy vehicle accessories like camo nets and slat cages)
+- Respawn timer
+- Teleport
+
+
+
+
+
+</p>
 
 ## Dependencies
 ### Required
 - [CBA A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
-- [Operation TREBUCHET](https://steamcommunity.com/workshop/filedetails/?id=769440155)
-- [Operation TREBUCHET First Contact](https://steamcommunity.com/workshop/filedetails/?id=1572627279)
-- [ONI Recon - Factions and Equipment](https://steamcommunity.com/sharedfiles/filedetails/?id=2877010969)
-
-### Recommended Mods
-Whilst ONI Recon Essentials doesn't depend on the following mods, some individual functionality will be missing without them:
 - [ACE](https://steamcommunity.com/workshop/filedetails/?id=463939057)
-- [Operation TREBUCHET ACE Compat](https://steamcommunity.com/workshop/filedetails/?id=1267657613)
-- [Operation TREBUCHET First Contact ACE Compat](https://steamcommunity.com/workshop/filedetails/?id=1572642262)
-- [Task Force Arrowhead Radio (BETA!!!)](https://steamcommunity.com/workshop/filedetails/?id=894678801)
-- [ACE3 Arsenal Extended - Core](https://steamcommunity.com/sharedfiles/filedetails/?id=2522638637)
-- [Ace Arsenal Category Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2850254784)
 
 # For Developers of this mod
 ## Install
@@ -68,9 +75,11 @@ For standardisation between class names and to prevent any possible future confl
 
 ## Credits
 
-Thank you to Arend and the 2Bnb for a lot of the scripts i have modified and used in this mod for a lot of the cool features.
+Thank you to Arend and the 2Bnb for many of the scripts I have modified and used in this mod for many of the cool features.
 
 MRHMilsimTools for providing the base for the ONI Vehicle Spawner
+
+Tinter for the furniture population scripts.
 
 ## License Adjustments to be in line with Requirements from above Credits
 
