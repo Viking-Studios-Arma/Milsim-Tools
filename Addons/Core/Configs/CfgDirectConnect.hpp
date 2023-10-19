@@ -8,13 +8,13 @@ class CfgMainMenuSpotlight {
 		actionText = "Connect to Main Server";
 		condition = true;
 	};
-	class ONI_CORE_HM_server { // for the hearts and minds enjoyers
-		text = "Hearts and Minds Server";
+	class ONI_CORE_2nd_server { // for the hearts and minds enjoyers
+		text = "2BnB Mike Force Server";
 		textIsQuote = 0;
 		picture = "x\vs_oni_c\Core\img\Oni-recon.paa";
 		//video = ; //Yeah, Maybe not
-		action = "connectToServer [""45.92.44.67"", 2402, """"]"; // Amateur says this goes --> IP, Port, Password
-		actionText = "Connect to H&M Server";
+		action = "connectToServer [""45.92.44.67"", 2502, """"]"; // Amateur says this goes --> IP, Port, Password
+		actionText = "Connect to 2BnB Server";
 		condition = true; //Lies
 	};
 };
