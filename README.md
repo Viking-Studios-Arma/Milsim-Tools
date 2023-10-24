@@ -39,10 +39,6 @@ Features include;
 - Respawn timer
 - Teleport
 
-
-
-
-
 </p>
 
 ## Dependencies
@@ -58,6 +54,13 @@ We have a build system to allow for key signing and addon compiling.
 1. [Git for Windows](https://git-scm.com/download/win)
 1. Windows PowerShell v5.1 or higher
 
+<ins>Automated Process:</ins>
+
+To automatically set up your system and build the mod you can execute the included `build.bat` file.
+You can do this by either going to `\tools` and double clicking the `build.bat` file, or if you use VSC you can select the bat file then in the `TERMINAL` at the bottom you can select the `Run Active File` option from the `...` menu.
+
+<ins>Manual Proccess:</ins>
+
 To set up your system to use the build script:
 - Open Windows PowerShell as Administrator and execute `set-executionpolicy remotesigned`
 - In the future, always use PowerShell as Admin
@@ -68,6 +71,7 @@ If on Windows, use the `tools\make.ps1` file to build the mod for you. It will b
 The build script will NOT leave the private key in the `keys` folder. It will delete it instead, to avoid any accidental uploading or distribution.
 
 Be aware, that the names of the `.bisign` and `.bikey` files depend on the latest tag on git. This means that, if you wish to upload a release, it is advised to first tag the latest git commit, and then build the mod. That way you have a nice version, such as `VS_ONI_C_v1.0.0.bikey` rather than `VS_ONI_C_-gae17a97.bikey`.
+
 ## Naming conventions
 For standardisation between class names and to prevent any possible future conflicts with class names the following naming convention has been developed:
 - for code: ONI_Core
