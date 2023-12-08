@@ -1,7 +1,7 @@
 class CfgPatches {
 	class VS_C_Backpack_Drones {
 		// Addon identity
-		name = "Viking Studios - Backpack Drone Items";
+		name = "Viking Studios - Toolkit Drones";
 		author = "Viking Studios";
 		authors[] = {"Amateur-god"};
 		url = "https://discord.gg/bkdGvUNFbb";
@@ -9,7 +9,7 @@ class CfgPatches {
 		versionAr[] = {1,0,0,0};
 		versionStr = "v1.0.0";
 		requiredAddons[] = {"A3_Modules_F","cba_settings","ace_arsenal","3DEN","ace_medical"};
-		units[] = {"VS_ED_1E","VS_ED_1D","VS_AR_2"};
+		units[] = {"VS_ED_1E"};
 		weapons[] = {"VS_C_ED_1D_Item","VS_C_ED_1E_Item","VS_C_AR2_Item"};
 		magazines[] = {};
 		ammo[] = {};
