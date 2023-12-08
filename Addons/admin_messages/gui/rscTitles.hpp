@@ -1,19 +1,19 @@
 class RscStructuredText;
 
 class RscTitles {
-	class oni_core_admin_messages_rscCustomChat {
+	class VS_Core_admin_messages_rscCustomChat {
 		duration = 20;
 		enableSimulation = 1;
 		fadeIn = 0.2;
 		fadeOut = 0.2;
 		idd = -1;
 		movingEnable = 0;
-		onLoad = "uiNamespace setVariable [""oni_core_admin_messages_rscCustomChat"",_this select 0]";
-		onUnload = "uiNamespace setVariable [""oni_core_admin_messages_rscCustomChat"",nil]";
+		onLoad = "uiNamespace setVariable [""VS_Core_admin_messages_rscCustomChat"",_this select 0]";
+		onUnload = "uiNamespace setVariable [""VS_Core_admin_messages_rscCustomChat"",nil]";
 
 		class controls {
 			class chatBox: RscStructuredText {
-				idc = ONI_CORE_ADMIN_MESSAGES_IDC_CUSTOMCHATTEXT;
+				idc = VS_CORE_ADMIN_MESSAGES_IDC_CUSTOMCHATTEXT;
 
 				colorBackground[] = {0,0,0,0.3};
 				font = "RobotoCondensed";

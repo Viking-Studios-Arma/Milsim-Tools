@@ -1,7 +1,7 @@
 class CfgFunctions {
-	class ONI_Core_admin_messages {
+	class VS_Core_admin_messages {
 		class functions {
-			file = "x\VS_ONI_C\admin_messages\functions";
+			file = "x\VS_C\admin_messages\functions";
 			class displayMessage {};
 			class initListbox {};
 			class isAdminOrZeus {};

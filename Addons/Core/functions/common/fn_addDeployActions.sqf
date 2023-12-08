@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_addDeployActions
+Function: vs_core_fnc_addDeployActions
 
 Description:
 	Adds custom ACE interaction to deploy components for vehicles, such as
@@ -14,7 +14,7 @@ Returns:
 	ACE Actions to insert as children
 
 Examples:
-	[] call oni_core_fnc_addDeployActions;
+	[] call vs_core_fnc_addDeployActions;
 
 Author:
 	Arend
@@ -25,7 +25,7 @@ params ["_vehicle", "_player", "_parameters"];
 
 private _actions = [];
 
-private _animations = [_vehicle] call oni_core_fnc_getDeployAnimations;
+private _animations = [_vehicle] call vs_core_fnc_getDeployAnimations;
 
 if (_animations isEqualTo []) exitWith {false;};
 
@@ -50,8 +50,8 @@ if (_animations isEqualTo []) exitWith {false;};
 							_newPhase = 1;
 						};
 
-						// _vehicle setVariable ["oni_core_%1_isActive", true];
-						[format["Animation data: %1 --- Variables: %2", _this, _animationClass], "core\functions\common\fn_addDeployActions.sqf"] call oni_core_fnc_log;
+						// _vehicle setVariable ["vs_core_%1_isActive", true];
+						[format["Animation data: %1 --- Variables: %2", _this, _animationClass], "core\functions\common\fn_addDeployActions.sqf"] call vs_core_fnc_log;
 						_vehicle animateSource [_animationClass, _newPhase];
 					},
 					{},

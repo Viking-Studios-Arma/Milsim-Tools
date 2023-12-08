@@ -1,7 +1,7 @@
 class CfgPatches {
-	class oni_core_admin_messages {
+	class VS_Core_admin_messages {
 		// Addon identity
-		name = "ONI Recon Core - Admin Messages";
+		name = "Viking Studios - Admin Messages";
 		author = "McDiod";
 		authors[] = {
 			"McDiod",

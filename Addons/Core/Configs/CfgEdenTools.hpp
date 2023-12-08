@@ -1,18 +1,18 @@
 /*License GPL-2.0*/
-#define BLACK_ASTEAMLEADER "ONI_Recon_SF_Team_Leader"
-#define BLACK_TEAMLEADER "ONI_Recon_SF_Team_Leader"
-#define BLACK_MEDIC "ONI_Recon_SF_Medic"
-#define BLACK_RIFLEMAN "ONI_Recon_SF_Rifleman"
+#define MTP_ASTEAMLEADER "B_Soldier_SL_F"
+#define MTP_TEAMLEADER "B_Soldier_TL_F"
+#define MTP_MEDIC "B_medic_F"
+#define MTP_RIFLEMAN "B_Soldier_F"
 
-#define MARINE_ASTEAMLEADER "ONI_Recon_SF_Team_Leader_Mar"
-#define MARINE_TEAMLEADER "ONI_Recon_SF_Team_Leader_Mar"
-#define MARINE_MEDIC "ONI_Recon_SF_Medic_Mar"
-#define MARINE_RIFLEMAN "ONI_Recon_SF_Rifleman_Mar"
+#define PACIFIC_ASTEAMLEADER "B_T_Soldier_SL_F"
+#define PACIFIC_TEAMLEADER "B_T_Soldier_TL_F"
+#define PACIFIC_MEDIC "B_T_Medic_F"
+#define PACIFIC_RIFLEMAN "B_T_Soldier_F"
 
-#define WOODLAND_ASTEAMLEADER "ONI_Recon_SF_Team_Leader_Wdl"
-#define WOODLAND_TEAMLEADER "ONI_Recon_SF_Team_Leader_Wdl"
-#define WOODLAND_MEDIC "ONI_Recon_SF_Medic_Wdl"
-#define WOODLAND_RIFLEMAN "ONI_Recon_SF_Rifleman_Wdl"
+#define WOODLAND_ASTEAMLEADER "B_W_Soldier_SL_F"
+#define WOODLAND_TEAMLEADER "B_W_Soldier_TL_F"
+#define WOODLAND_MEDIC "B_W_Medic_F"
+#define WOODLAND_RIFLEMAN "B_W_Soldier_F"
 
 class ctrlMenuStrip;
 class display3DEN
@@ -24,19 +24,19 @@ class display3DEN
 			class Items
 			{
 				class Tools {
-					items[] += {"ONI_CORE_Tools"};
+					items[] += {"VS_CORE_Tools"};
 				};
-				class oni_core_tools {
-					text = "ONI Tools...";
-					items[] = {"ONI_CORE_Settings", "ONI_CORE_Assets"};
+				class VS_Core_tools {
+					text = "VS Tools...";
+					items[] = {"VS_CORE_Settings", "VS_CORE_Assets"};
 				};
-				class oni_core_settings {
-					text = "Load ONI Settings";
-					action = "['Are you sure you want to overwrite current settings with ONI defaults?', 'Load ONI Settings', ['Overwrite', {[] call oni_core_fnc_edenLoadSettings}], true] call BIS_fnc_3DENShowMessage";
+				class VS_Core_settings {
+					text = "Load VS Settings";
+					action = "['Are you sure you want to overwrite current settings with VS defaults?', 'Load VS Settings', ['Overwrite', {[] call VS_Core_fnc_edenLoadSettings}], true] call BIS_fnc_3DENShowMessage";
 				};
-				class oni_core_assets {
-					text = "Load ONI Slots & Modules";
-					action = "findDisplay 313 createDisplay 'oni_core_edenGUI'";
+				class VS_Core_assets {
+					text = "Load VS Slots & Modules";
+					action = "findDisplay 313 createDisplay 'VS_Core_edenGUI'";
 				};
 			};
 		};
@@ -45,228 +45,228 @@ class display3DEN
 class CfgGroups
 {
 	class West {
-		class oni_core_compositions {
-			name = "ONI";
+		class VS_Core_compositions {
+			name = "VS";
 			scope = 0;
 			class infantry {
 				name = "";
-				class BLACK_zeus {
+				class MTP_zeus {
 					name = "";
 					scope = 0;
 					faction = "BLU_F";
 					side = 1;
 					class Unit0 {
 						position[] = {0,0,0};
-						vehicle = BLACK_ASTEAMLEADER;
+						vehicle = MTP_ASTEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit1 {
 						position[] = {1,0,0};
-						vehicle = BLACK_ASTEAMLEADER;
+						vehicle = MTP_ASTEAMLEADER;
 						rank = "PRIVATE";
 					};
 				};
-				class BLACK_section {
+				class MTP_section {
 					name = "";
 					scope = 0;
 					faction = "BLU_F";
 					side = 1;
 					class Unit0 {
 						position[] = {0,0,0};
-						vehicle = BLACK_TEAMLEADER;
+						vehicle = MTP_TEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit1 {
 						position[] = {0,-3,0};
-						vehicle = BLACK_ASTEAMLEADER;
+						vehicle = MTP_ASTEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit2 {
 						position[] = {0,-6,0};
-						vehicle = BLACK_MEDIC;
+						vehicle = MTP_MEDIC;
 						rank = "PRIVATE";
 					};
 					class Unit3 {
 						position[] = {0,-9,0};
-						vehicle = BLACK_RIFLEMAN;
+						vehicle = MTP_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 					class Unit4 {
 						position[] = {1,0,0};
-						vehicle = BLACK_RIFLEMAN;
+						vehicle = MTP_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 					class Unit5 {
 						position[] = {1,-3,0};
-						vehicle = BLACK_RIFLEMAN;
+						vehicle = MTP_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 					class Unit6 {
 						position[] = {1,-6,0};
-						vehicle = BLACK_RIFLEMAN;
+						vehicle = MTP_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 					class Unit7 {
 						position[] = {1,-9,0};
-						vehicle = BLACK_RIFLEMAN;
+						vehicle = MTP_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 
 				};
-				class BLACK_command {
+				class MTP_command {
 					name = "";
 					scope = 0;
 					faction = "BLU_F";
 					side = 1;
 					class Unit0 {
 						position[] = {0,0,0};
-						vehicle = BLACK_TEAMLEADER;
+						vehicle = MTP_TEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit1 {
 						position[] = {0,-3,0};
-						vehicle = BLACK_ASTEAMLEADER;
+						vehicle = MTP_ASTEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit2{
 						position[] = {0,-6,0};
-						vehicle = BLACK_MEDIC;
+						vehicle = MTP_MEDIC;
 						rank = "PRIVATE";
 					};
 					class Unit3 {
 						position[] = {0,-9,0};
-						vehicle = BLACK_RIFLEMAN;
+						vehicle = MTP_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 				};
-				class BLACK_defaults {
+				class MTP_defaults {
 					name = "";
 					scope = 0;
 					faction = "BLU_F";
 					side = 1;
 					class Unit0 {
 						position[] = {0,0,0};
-						vehicle = BLACK_TEAMLEADER;
+						vehicle = MTP_TEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit1{
 						position[] = {0,-6,0};
-						vehicle = BLACK_MEDIC;
+						vehicle = MTP_MEDIC;
 						rank = "PRIVATE";
 					};
 					class Unit2 {
 						position[] = {0,-9,0};
-						vehicle = BLACK_RIFLEMAN;
+						vehicle = MTP_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 				};
-				class MARINE_zeus {
+				class PACIFIC_zeus {
 					name = "";
 					scope = 0;
 					faction = "BLU_F";
 					side = 1;
 					class Unit0 {
 						position[] = {0,0,0};
-						vehicle = MARINE_ASTEAMLEADER;
+						vehicle = PACIFIC_ASTEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit1 {
 						position[] = {1,0,0};
-						vehicle = MARINE_ASTEAMLEADER;
+						vehicle = PACIFIC_ASTEAMLEADER;
 						rank = "PRIVATE";
 					};
 				};
-				class MARINE_section {
+				class PACIFIC_section {
 					name = "";
 					scope = 0;
 					faction = "BLU_F";
 					side = 1;
 					class Unit0 {
 						position[] = {0,0,0};
-						vehicle = MARINE_TEAMLEADER;
+						vehicle = PACIFIC_TEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit1 {
 						position[] = {0,-3,0};
-						vehicle = MARINE_ASTEAMLEADER;
+						vehicle = PACIFIC_ASTEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit2 {
 						position[] = {0,-6,0};
-						vehicle = MARINE_MEDIC;
+						vehicle = PACIFIC_MEDIC;
 						rank = "PRIVATE";
 					};
 					class Unit3 {
 						position[] = {0,-9,0};
-						vehicle = MARINE_RIFLEMAN;
+						vehicle = PACIFIC_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 					class Unit4 {
 						position[] = {1,0,0};
-						vehicle = MARINE_RIFLEMAN;
+						vehicle = PACIFIC_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 					class Unit5 {
 						position[] = {1,-3,0};
-						vehicle = MARINE_RIFLEMAN;
+						vehicle = PACIFIC_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 					class Unit6 {
 						position[] = {1,-6,0};
-						vehicle = MARINE_RIFLEMAN;
+						vehicle = PACIFIC_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 					class Unit7 {
 						position[] = {1,-9,0};
-						vehicle = MARINE_RIFLEMAN;
+						vehicle = PACIFIC_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 
 				};
-				class MARINE_command {
+				class PACIFIC_command {
 					name = "";
 					scope = 0;
 					faction = "BLU_F";
 					side = 1;
 					class Unit0 {
 						position[] = {0,0,0};
-						vehicle = MARINE_TEAMLEADER;
+						vehicle = PACIFIC_TEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit1 {
 						position[] = {0,-3,0};
-						vehicle = MARINE_ASTEAMLEADER;
+						vehicle = PACIFIC_ASTEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit2{
 						position[] = {0,-6,0};
-						vehicle = MARINE_MEDIC;
+						vehicle = PACIFIC_MEDIC;
 						rank = "PRIVATE";
 					};
 					class Unit3 {
 						position[] = {0,-9,0};
-						vehicle = MARINE_RIFLEMAN;
+						vehicle = PACIFIC_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 				};
-				class MARINE_defaults {
+				class PACIFIC_defaults {
 					name = "";
 					scope = 0;
 					faction = "BLU_F";
 					side = 1;
 					class Unit0 {
 						position[] = {0,0,0};
-						vehicle = MARINE_TEAMLEADER;
+						vehicle = PACIFIC_TEAMLEADER;
 						rank = "PRIVATE";
 					};
 					class Unit1{
 						position[] = {0,-6,0};
-						vehicle = MARINE_MEDIC;
+						vehicle = PACIFIC_MEDIC;
 						rank = "PRIVATE";
 					};
 					class Unit2 {
 						position[] = {0,-9,0};
-						vehicle = MARINE_RIFLEMAN;
+						vehicle = PACIFIC_RIFLEMAN;
 						rank = "PRIVATE";
 					};
 				};

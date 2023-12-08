@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_toBoolean
+Function: vs_core_fnc_toBoolean
 
 Description:
 	Casts any Number or String to Boolean
@@ -11,7 +11,7 @@ Returns:
 	Result of the cast <BOOLEAN>
 
 Examples:
-	[_number] call oni_core_fnc_toBoolean;
+	[_number] call vs_core_fnc_toBoolean;
 
 Author:
 	Arend

@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_notifyZeus
+Function: vs_core_fnc_notifyZeus
 
 Description:
 	Show Zeus Notification along with an appropriate sound effect.
@@ -12,8 +12,8 @@ Returns:
 	Nothing
 
 Examples:
-	["Player has respawned", "warning"] call oni_core_fnc_notifyZeus;
-	[["Player has died", "and another may afterwards"], "warning"] call oni_core_fnc_notifyZeus;
+	["Player has respawned", "warning"] call vs_core_fnc_notifyZeus;
+	[["Player has died", "and another may afterwards"], "warning"] call vs_core_fnc_notifyZeus;
 
 Author:
 	Arend
@@ -21,7 +21,7 @@ License GPL-2.0
 ---------------------------------------------------------------------------- */
 params [["_message", "", ["", []]], ["_type", "info", [""]]];
 
-if (!(player call oni_core_fnc_isCurator)) exitWith {};
+if (!(player call vs_core_fnc_isCurator)) exitWith {};
 
 if (typeName _message == "ARRAY" && count _message > 1) then {
 	_message = format _message;

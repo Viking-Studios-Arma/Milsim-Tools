@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_openTimerUI
+Function: vs_core_fnc_openTimerUI
 
 Description:
 	Opens the Timer UI to set respawn timer.
@@ -13,7 +13,7 @@ Returns:
 	True <BOOL>
 
 Examples:
-	[250] call oni_core_fnc_openTimerUI;
+	[250] call vs_core_fnc_openTimerUI;
 
 Author:
 	mharis001
@@ -38,7 +38,7 @@ private _defaultConfirmAction = {
 	private _slider = ctrlParent _button displayCtrl 8505;
 	private _time = floor sliderPosition _slider;
 
-	[_time] call oni_core_fnc_setRespawnTimer;
+	[_time] call vs_core_fnc_setRespawnTimer;
 	closeDialog 0;
 };
 

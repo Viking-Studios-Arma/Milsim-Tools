@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_strToArray
+Function: vs_core_fnc_strToArray
 
 Description:
 	Turn a comma separated list from a string into an array of strings
@@ -13,7 +13,7 @@ Returns:
 	Array of list items <ARRAY>
 
 Examples:
-	["C_supplyCrate_F,B_Slingload_01_Ammo_F", true] call oni_core_fnc_strToArray;
+	["C_supplyCrate_F,B_Slingload_01_Ammo_F", true] call vs_core_fnc_strToArray;
 
 Author:
 	Arend

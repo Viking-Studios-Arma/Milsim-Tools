@@ -14,13 +14,13 @@ License GPL-2.0
 class child : parent { \
 	class ACE_Actions { \
 		class ACE_MainActions { \
-			class ONI_CORE_VehicleDeploy { \
+			class vs_cORE_VehicleDeploy { \
 				displayName = "Deploy"; \
 				distance = 4; \
 				icon = "\A3\ui_f\data\GUI\Rsc\RscDisplayGarage\animationSources_ca.paa"; \
-				condition = "!(([_target] call oni_core_fnc_getDeployAnimations) isEqualTo []) && simulationEnabled _target && alive _target"; \
+				condition = "!(([_target] call vs_core_fnc_getDeployAnimations) isEqualTo []) && simulationEnabled _target && alive _target"; \
 				statement = ""; \
-				insertChildren = "_this call oni_core_fnc_addDeployActions;"; \
+				insertChildren = "_this call vs_core_fnc_addDeployActions;"; \
 				exceptions[] = {"isNotEscorting", "isNotDragging", "isNotCarrying"}; \
 			}; \
 		}; \

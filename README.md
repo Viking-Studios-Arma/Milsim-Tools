@@ -27,7 +27,7 @@
 
 <p>
 
-Adding much-needed functionality to the Arma 3 game for the ONI Recon group through a collection of open-source scripts we have permission to use/upload and scripts we have made or built upon. Other Groups/Communities are welcome to use this mod for the added functionality.
+Adding much-needed functionality to the Arma 3 game for the Milsim groups through a collection of open-source scripts we have permission to use/upload and scripts we have made or built upon. (This mod will also be the core mod of ant Milsim units that the Viking Studios team decides to make in the future)
 
 Features include;
 - Admin Messages
@@ -38,6 +38,7 @@ Features include;
 - Vehicle Deploy actions via ACE (Deploy vehicle accessories like camo nets and slat cages)
 - Respawn timer
 - Teleport
+- Backpack Drone Toolkit items (Drones the size of a toolkit able to be placed in a backpack and deployed and packed back up using ACE)
 
 </p>
 
@@ -70,12 +71,12 @@ If on Windows, use the `tools\make.ps1` file to build the mod for you. It will b
 
 The build script will NOT leave the private key in the `keys` folder. It will delete it instead, to avoid any accidental uploading or distribution.
 
-Be aware, that the names of the `.bisign` and `.bikey` files depend on the latest tag on git. This means that, if you wish to upload a release, it is advised to first tag the latest git commit, and then build the mod. That way you have a nice version, such as `VS_ONI_C_v1.0.0.bikey` rather than `VS_ONI_C_-gae17a97.bikey`.
+Be aware, that the names of the `.bisign` and `.bikey` files depend on the latest tag on git. This means that, if you wish to upload a release, it is advised to first tag the latest git commit, and then build the mod. That way you have a nice version, such as `VS_C_v1.0.0.bikey` rather than `VS_C_-gae17a97.bikey`.
 
 ## Naming conventions
 For standardisation between class names and to prevent any possible future conflicts with class names the following naming convention has been developed:
-- for code: ONI_Core
-- for presentation: ONI Core - {Addon Name}
+- for code: VS_Core
+- for presentation: Viking Studios - {Addon Name}
 
 ## Credits
 
@@ -87,9 +88,9 @@ Tinter for the furniture population scripts.
 
 ## License Adjustments to be in line with Requirements from above Credits
 
-ONIVehicleSpawner is released under APL-SA
+Viking Studios Vehicle Spawner is released under APL-SA
 
-Admin_Messages and Anything in Core which has 2BNB or Arend as an author is release under GPL2.0 (This will be specified in each file)
+Admin_Messages and Anything in Core which has 2BNB or Arend as an author is released under GPL2.0 (This will be specified in each file)
 
 
 </p>

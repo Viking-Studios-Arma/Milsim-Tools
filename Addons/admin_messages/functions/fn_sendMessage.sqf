@@ -1,5 +1,5 @@
-private _editBox = uiNamespace getVariable ["oni_core_admin_messages_sendBoxCtrl",controlNull];
-private _listbox = uiNamespace getVariable ["oni_core_admin_messages_sendBoxListboxCtrl",controlNull];
+private _editBox = uiNamespace getVariable ["VS_Core_admin_messages_sendBoxCtrl",controlNull];
+private _listbox = uiNamespace getVariable ["VS_Core_admin_messages_sendBoxListboxCtrl",controlNull];
 
 if (isNull _editBox || isNull _listbox) exitWith {};
 
@@ -8,7 +8,7 @@ if (_message == "") exitWith {};
 
 _editBox ctrlSetText "";
 
-if ([] call oni_core_admin_messages_fnc_isAdminOrZeus) then {
+if ([] call VS_Core_admin_messages_fnc_isAdminOrZeus) then {
 
 	private _lbCurSel = lbCurSel _listbox;
 	private _lbData = _listbox lbData _lbCurSel;
@@ -18,7 +18,7 @@ if ([] call oni_core_admin_messages_fnc_isAdminOrZeus) then {
 	private _receiveCondition = if ((call compile _lbData) < 0) then {
 		switch (call compile _lbData) do {
 			case (-2): {{true}};												//EVERYONE
-			case (-3): {{[] call oni_core_admin_messages_fnc_isAdminOrZeus}};		//OTHER ADMINS AND ZEUS
+			case (-3): {{[] call VS_Core_admin_messages_fnc_isAdminOrZeus}};		//OTHER ADMINS AND ZEUS
 			case (-4): {{playerSide == WEST}};
 			case (-5): {{playerSide == EAST}};
 			case (-6): {{playerSide == INDEPENDENT}};
@@ -31,16 +31,16 @@ if ([] call oni_core_admin_messages_fnc_isAdminOrZeus) then {
 	};
 
 	// display sent message locally
-	[format["%1 %2",localize "STR_ONI_CORE_ADMIN_MESSAGES_TO",_lbText],_message] call oni_core_admin_messages_fnc_displayMessage;
+	[format["%1 %2",localize "STR_VS_CORE_ADMIN_MESSAGES_TO",_lbText],_message] call VS_Core_admin_messages_fnc_displayMessage;
 
 	// send message to recipient
-	[profileName,getPlayerUID player,_message,_receiveCondition,_receiveConditionParams] remoteExec ["oni_core_admin_messages_fnc_receiveMessage",0,false];
+	[profileName,getPlayerUID player,_message,_receiveCondition,_receiveConditionParams] remoteExec ["VS_Core_admin_messages_fnc_receiveMessage",0,false];
 } else {
 	// display sent message locally
-	[format["%1 %2",localize "STR_ONI_CORE_ADMIN_MESSAGES_TO","Admin"],_message] call oni_core_admin_messages_fnc_displayMessage;
+	[format["%1 %2",localize "STR_VS_CORE_ADMIN_MESSAGES_TO","Admin"],_message] call VS_Core_admin_messages_fnc_displayMessage;
 
 	// send message to recipient
-	[profileName,getPlayerUID player,_message] remoteExec ["oni_core_admin_messages_fnc_receiveMessage",0,false];
+	[profileName,getPlayerUID player,_message] remoteExec ["VS_Core_admin_messages_fnc_receiveMessage",0,false];
 };
 
 playSound "3DEN_notificationDefault";

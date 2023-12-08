@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_forceRespawn
+Function: vs_core_fnc_forceRespawn
 
 Description:
 	Forces all the dead people to respawn immediately.
@@ -12,7 +12,7 @@ Returns:
 	Nothing
 
 Examples:
-	[] call oni_core_fnc_forceRespawn;
+	[] call vs_core_fnc_forceRespawn;
 
 Author:
 	Ford
@@ -22,5 +22,5 @@ License GPL-2.0
 {
 	setPlayerRespawnTime 0;
 	sleep 2;
-	setPlayerRespawnTime oni_core_respawn_timer;
+	setPlayerRespawnTime vs_core_respawn_timer;
 } remoteExec ["BIS_fnc_call", 0];

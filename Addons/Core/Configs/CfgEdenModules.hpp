@@ -12,8 +12,8 @@ Author:
 ---------------------------------------------------------------------------- */
 class CfgFactionClasses {
 	class NO_CATEGORY;
-	class ONI_CORE_Modules : NO_CATEGORY {
-		displayName = "ONI Modules";
+	class VS_CORE_Modules : NO_CATEGORY {
+		displayName = "Viking Studios Modules";
 	};
 };
 
@@ -35,13 +35,13 @@ class CfgVehicles {
 		};
 	};
 
-	class ONI_CORE_Barracks_Module : Module_F {
+	class VS_CORE_Barracks_Module : Module_F {
 		scope = 2;
 		displayName = "Barracks Functions";
 		// icon = "";
-		category = "ONI_CORE_Modules";
+		category = "VS_CORE_Modules";
 
-		function = "oni_core_fnc_barracksModule";
+		function = "VS_Core_fnc_barracksModule";
 		functionPriority = 2;
 		isGlobal = 0;
 		isTriggerActivated = 0;
@@ -51,14 +51,14 @@ class CfgVehicles {
 
 		class Attributes : AttributesBase {
 			class HasArsenal : Checkbox {
-				property = "ONI_CORE_Barracks_Module_HasArsenal";
+				property = "VS_CORE_Barracks_Module_HasArsenal";
 				displayName = "Arsenal";
 				tooltip = "Add Arsenal to the object";
 				defaultValue = true;
 			};
 
 			class ArsenalFilter : Combo {
-				property = "ONI_CORE_Barracks_Module_ArsenalFilter";
+				property = "VS_CORE_Barracks_Module_ArsenalFilter";
 				displayName = "Arsenal Filter";
 				tooltip = "The filter to set on the Arsenal";
 				typeName = "STRING";
@@ -82,14 +82,14 @@ class CfgVehicles {
 			};
 
 			class HasFullHeal : Checkbox {
-				property = "ONI_CORE_Barracks_Module_HasFullHeal";
+				property = "VS_CORE_Barracks_Module_HasFullHeal";
 				displayName = "Full Heal";
 				tooltip = "Add Full Heal to object";
 				defaultValue = true;
 			};
 
 			class HasSpectator : Checkbox {
-				property = "ONI_CORE_Barracks_Module_HasSpectator";
+				property = "VS_CORE_Barracks_Module_HasSpectator";
 				displayName = "Spectator";
 				tooltip = "Add Spectator to object";
 				defaultValue = true;
@@ -99,12 +99,12 @@ class CfgVehicles {
 		};
 
 		class ModuleDescription : ModuleDescription {
-			description = "Add ONI barracks functions to synced objects";
+			description = "Add Viking Studios barracks functions to synced objects";
 			sync[] = {"LocationArea_F"};
 
 			class LocationArea_F {
 				description[] = {
-					"Add barracks functions to synced objects that give the players certain ONI functions to use via ACE interaction.",
+					"Add barracks functions to synced objects that give the players certain Viking Studios functions to use via ACE interaction.",
 					"",
 					"Barracks functions include:",
 					"- Filtered Arsenal",

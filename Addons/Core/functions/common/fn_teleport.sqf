@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_addTeleporter
+Function: vs_core_fnc_addTeleporter
 
 Description:
 	Adds a teleport action menu item which will teleport the player to the
@@ -15,9 +15,9 @@ Returns:
 	Nothing
 
 Examples:
-	[this, "Teleport to Airfield", airfield_east] call oni_core_fnc_teleport;
+	[this, "Teleport to Airfield", airfield_east] call vs_core_fnc_teleport;
 
-	[this, "Teleport to Airfield", "rally_point_marker"] call oni_core_fnc_teleport;
+	[this, "Teleport to Airfield", "rally_point_marker"] call vs_core_fnc_teleport;
 
 Author:
 	Arend

@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_setRespawnTimer
+Function: vs_core_fnc_setRespawnTimer
 
 Description:
 	Set the respawn timer CBA Setting.
@@ -11,7 +11,7 @@ Returns:
 	Nothing
 
 Examples:
-	[134] call oni_core_fnc_setRespawnTimer;
+	[134] call vs_core_fnc_setRespawnTimer;
 
 Author:
 	Arend
@@ -22,12 +22,12 @@ params [["_time", 0, [0]]];
 [
 	"cba_settings_setSettingMission",
 	[
-		"oni_core_respawn_timer",
+		"vs_core_respawn_timer",
 		_time,
 		1 // Priority
 	],
-	"oni_core_respawn_timer_event" // Event ID, must be unique
+	"vs_core_respawn_timer_event" // Event ID, must be unique
 ] call CBA_fnc_globalEventJIP;
 
-[format["Respawn timer set to %1", [_time, "M:SS"] call CBA_fnc_formatElapsedTime]] call oni_core_fnc_notifyZeus;
-[format["Respawn timer set to %1", [_time, "M:SS"] call CBA_fnc_formatElapsedTime], "core\functions\common\fn_setRespawnTimer.sqf"] call oni_core_fnc_log;
+[format["Respawn timer set to %1", [_time, "M:SS"] call CBA_fnc_formatElapsedTime]] call vs_core_fnc_notifyZeus;
+[format["Respawn timer set to %1", [_time, "M:SS"] call CBA_fnc_formatElapsedTime], "core\functions\common\fn_setRespawnTimer.sqf"] call vs_core_fnc_log;

@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_changeSpeakVolume
+Function: vs_core_fnc_changeSpeakVolume
 
 Description:
 	Change the direct speech volume to be one up or down from the previous
@@ -16,7 +16,7 @@ Returns:
 	Nothing
 
 Examples:
-	[] call oni_core_fnc_changeSpeakVolume;
+	[] call vs_core_fnc_changeSpeakVolume;
 
 Author:
 	Arend
@@ -39,7 +39,7 @@ private _nextSpeakVolumeIndex = (_speakVolumes find _currentSpeakVolume) + _modi
 if (_nextSpeakVolumeIndex < 0 || 2 < _nextSpeakVolumeIndex) exitWith {};
 
 private _nextSpeakVolume = _speakVolumes select _nextSpeakVolumeIndex;
-[format["Found the next speak volume: %1 %2", _nextSpeakVolume, _speakMeters select _nextSpeakVolumeIndex], "core\functions\fn_changeSpeakVolume.sqf"] call oni_core_fnc_log;
+[format["Found the next speak volume: %1 %2", _nextSpeakVolume, _speakMeters select _nextSpeakVolumeIndex], "core\functions\fn_changeSpeakVolume.sqf"] call vs_core_fnc_log;
 
 TF_speak_volume_level = _nextSpeakVolume;
 TF_speak_volume_meters = _speakMeters select _nextSpeakVolumeIndex;

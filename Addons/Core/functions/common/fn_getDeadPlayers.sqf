@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_getDeadPlayers
+Function: vs_core_fnc_getDeadPlayers
 
 Description:
 	Create a list of dead players.
@@ -15,7 +15,7 @@ Returns:
 	3: Civilian
 
 Examples:
-	[] call oni_core_fnc_getDeadPlayers;
+	[] call vs_core_fnc_getDeadPlayers;
 
 Author:
 	Arend
@@ -33,5 +33,5 @@ private _side = 0;
 	};
 } foreach ([] call CBA_fnc_players);
 
-[format["Got dead players %1", _deadPlayers], "core\functions\common\fn_getDeadPlayers.sqf"] call oni_core_fnc_log;
+[format["Got dead players %1", _deadPlayers], "core\functions\common\fn_getDeadPlayers.sqf"] call vs_core_fnc_log;
 _deadPlayers;

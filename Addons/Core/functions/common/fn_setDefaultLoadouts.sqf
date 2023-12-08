@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_setDefaultLoadouts
+Function: vs_core_fnc_setDefaultLoadouts
 
 Description:
 	Sets the default loadouts for called players.
@@ -11,7 +11,7 @@ Returns:
 	Nothing.
 
 Examples:
-	[_DefaultLoadouts] call oni_core_fnc_setDefaultLoadouts;
+	[_DefaultLoadouts] call vs_core_fnc_setDefaultLoadouts;
 
 Author:
 	Met

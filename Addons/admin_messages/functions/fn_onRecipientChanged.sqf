@@ -2,12 +2,12 @@ params [["_ctrl",controlNull],["_selID",-1]];
 
 private _data = call compile (_ctrl lbData _selID);
 
-private _sendButton = uiNamespace getVariable ["oni_core_admin_messages_sendBoxButtonCtrl",controlNull];
+private _sendButton = uiNamespace getVariable ["VS_Core_admin_messages_sendBoxButtonCtrl",controlNull];
 
 if (!(_data isEqualType 0) || {_data == -1}) then {
 	_sendButton ctrlEnable false;
-	_sendButton ctrlSetText (localize "STR_ONI_CORE_ADMIN_MESSAGES_SELECTVALIDRECIP");
+	_sendButton ctrlSetText (localize "STR_VS_CORE_ADMIN_MESSAGES_SELECTVALIDRECIP");
 } else {
 	_sendButton ctrlEnable true;
-	_sendButton ctrlSetText format [(localize "STR_ONI_CORE_ADMIN_MESSAGES_SENDTO"),_ctrl lbText _selID];
+	_sendButton ctrlSetText format [(localize "STR_VS_CORE_ADMIN_MESSAGES_SENDTO"),_ctrl lbText _selID];
 };

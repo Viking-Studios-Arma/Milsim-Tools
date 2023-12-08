@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_arrayFlatten
+Function: vs_core_fnc_arrayFlatten
 
 Description:
 	A utility function to take a multi-dimensional array and flatten it into a
@@ -16,7 +16,7 @@ Returns:
 	Flattened array <ARRAY>
 
 Examples:
-	[_multidimensionalArray] call oni_core_fnc_arrayFlatten;
+	[_multidimensionalArray] call vs_core_fnc_arrayFlatten;
 
 Author:
 	KillzoneKid

@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-	Function: oni_core_fnc_edenCreateAssets
+	Function: vs_core_fnc_edenCreateAssets
 
 	Description:
 	Creates mission slots, modules and markers.
@@ -15,7 +15,7 @@
 	Nothing.
 
 	Examples:
-	["Odin", "Valhalla", "MTP", 3, false] call oni_core_fnc_edenCreateAssets;
+	["Odin", "Valhalla", "MTP", 3, false] call vs_core_fnc_edenCreateAssets;
 
 	Author:
 	Met
@@ -88,8 +88,8 @@ _entities =
 		["ArsenalObject", true]
 	],
 	[
-		["Logic", "ONI_CORE_Barracks_Module", _centralPos vectorAdd [-4, 7]],
-		["ONI_CORE_Barracks_Module_ArsenalFilter", "Standard"],
+		["Logic", "vs_cORE_Barracks_Module", _centralPos vectorAdd [-4, 7]],
+		["vs_cORE_Barracks_Module_ArsenalFilter", "Standard"],
 		["ArsenalObject", true]
 	],
 	[
@@ -102,12 +102,12 @@ _entities =
 _sections =
 [
 	[
-		[configfile >> "CfgGroups" >> "West" >> "oni_core_compositions" >> "infantry" >> _nameCommand, _centralPos vectorAdd [0, 0]],
+		[configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameCommand, _centralPos vectorAdd [0, 0]],
 		"Command",
 		["description", format ["1: 1IC@%1 1-Actual", _callsign ]]
 	],
 	[
-		[configfile >> "CfgGroups" >> "West" >> "oni_core_compositions" >> "infantry" >> _nameZeus, _centralPos vectorAdd [1, 2]],
+		[configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameZeus, _centralPos vectorAdd [1, 2]],
 		"Zeus",
 		["description", format ["1: Zeus@%1", _zeusCallsign]]
 	]
@@ -130,7 +130,7 @@ _last = "";
 // The main sections
 _num = 1;
 for "_i" from 1 to _numberOfSections do {
-	create3DENComposition [configfile >> "CfgGroups" >> "West" >> "oni_core_compositions" >> "infantry" >> _nameSection, _centralPos vectorAdd [_num, 0, 0]];
+	create3DENComposition [configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameSection, _centralPos vectorAdd [_num, 0, 0]];
 	set3DENAttributes [[get3DENSelected "Group", "groupID", format ["1-%1 Sec", _i]], [get3DENSelected "Object", "ControlMP", true]];
 	_group = get3DENselected "Object" select 0;
 	_ix = 3;
@@ -190,12 +190,12 @@ for "_i" from 1 to _numberOfSections do {
 
 // default Loadouts
 if (_createDefaults) then {
-	create3DENComposition [configfile >> "CfgGroups" >> "West" >> "oni_core_compositions" >> "infantry" >> _nameDefaults, _centralPos vectorAdd [_num + 2, 3, 0]];
-	set3DENAttributes [[get3DENSelected "Group", "groupID", "Default Loadouts"], [get3DENSelected "Object", "ONI_CORE_3den_Loadout", true]];
+	create3DENComposition [configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameDefaults, _centralPos vectorAdd [_num + 2, 3, 0]];
+	set3DENAttributes [[get3DENSelected "Group", "groupID", "Default Loadouts"], [get3DENSelected "Object", "vs_cORE_3den_Loadout", true]];
 	_groupComp = get3DENSelected "Object";
 	{
 		_unitDisplayName = [configfile >> "CfgVehicles" >> typeOf _x] call BIS_fnc_displayName;
-		_x set3DENAttribute ["ONI_CORE_3den_LoadoutName", _unitDisplayName];
+		_x set3DENAttribute ["vs_cORE_3den_LoadoutName", _unitDisplayName];
 	} forEach _groupComp;
 	set3DENSelected [];
 };

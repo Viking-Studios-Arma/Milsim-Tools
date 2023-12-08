@@ -1,6 +1,7 @@
 class CfgPatches {
-	class ONI_core_FursnishBuildings{
+	class VS_core_FursnishBuildings{
     author = "Tinter";
+		name = "Viking Studios - Building Furnisher";
 		units[] = {}; //
 		weapons[] = {}; //
 		requiredVersion = 0.1; //
@@ -12,6 +13,6 @@ class CfgFunctions {
 };
 class Extended_PreInit_EventHandlers {
     class tinter_furniture_pre_init {
-        init = "call compile preprocessFileLineNumbers 'x\vs_oni_c\Furnish_Buildings\furniture\XEH_preInit.sqf'";
+        init = "call compile preprocessFileLineNumbers 'x\VS_C\Furnish_Buildings\furniture\XEH_preInit.sqf'";
     };
 };

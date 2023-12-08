@@ -1,7 +1,7 @@
 class CfgPatches {
-	class ONI_core {
+	class VS_Core {
 		// Addon identity
-		name = "ONI Recon - Core";
+		name = "Viking Studios - Core";
 		author = "Viking Studios";
 		authors[] = {"Amateur-god","Arend","2BNB"};
 		url = "https://discord.gg/bkdGvUNFbb";
@@ -17,9 +17,9 @@ class CfgPatches {
 	};
 };
 class CfgFunctions {
-	class oni_core {
+	class VS_Core {
 		class common {
-			file = "\x\vs_oni_c\core\functions\common";
+			file = "\x\VS_C\core\functions\common";
 			class addDeployActions {};
 			class addFullHeal {};
 			class addSpectator {};
@@ -42,19 +42,19 @@ class CfgFunctions {
 		};
 
 		class zeus_modules {
-			file = "\x\vs_oni_c\core\functions\zeus_modules";
+			file = "\x\VS_C\core\functions\zeus_modules";
 			class addBarracks {};
 			class forceRespawn {};
 			class addMusicRadio {};
 		};
 
 		class eden_modules {
-			file = "\x\vs_oni_c\core\functions\eden_modules";
+			file = "\x\VS_C\core\functions\eden_modules";
 			class barracksModule {};
 		};
 
 		class utilities {
-			file = "\x\vs_oni_c\core\functions\utilities";
+			file = "\x\VS_C\core\functions\utilities";
 			class arrayFlatten {};
 			class log {};
 			class strToArray {};
@@ -64,20 +64,19 @@ class CfgFunctions {
 };
 
 class Extended_PreInit_EventHandlers {
-	class oni_core_preInit {
-		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_preInit.sqf'";
+	class VS_Core_preInit {
+		init = "call compile preprocessFileLineNumbers '\x\VS_C\core\XEH_preInit.sqf'";
 	};
 };
 
 class Extended_PostInit_EventHandlers {
-	class oni_core_postInit {
-		init = "call compile preprocessFileLineNumbers '\x\vs_oni_c\core\XEH_postInit.sqf'";
+	class VS_Core_postInit {
+		init = "call compile preprocessFileLineNumbers '\x\VS_C\core\XEH_postInit.sqf'";
 	};
 };
 
 // Config features/fixes
 #include "configs\CfgDefines.hpp"
-#include "configs\CfgDirectConnect.hpp"
 #include "configs\CfgEdenGUI.hpp"
 #include "configs\CfgEdenLoadouts.hpp"
 #include "configs\CfgEdenModules.hpp"
@@ -89,4 +88,3 @@ class Extended_PostInit_EventHandlers {
 #include "configs\CfgVehicleDeploy.hpp"
 #include "configs\CfgZenMenu.hpp"
 #include "configs\CfgZeusActions.hpp"
-#include "Configs\CfgDirectConnect.hpp"

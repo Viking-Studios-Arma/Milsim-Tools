@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_log
+Function: vs_core_fnc_log
 
 Description:
 	Logs a message to the .rpt file and to systemChat
@@ -12,7 +12,7 @@ Returns:
 	Nothing
 
 Examples:
-	["Troubleshooting info!", "core\XEH_preInit.sqf"] call oni_core_fnc_log;
+	["Troubleshooting info!", "core\XEH_preInit.sqf"] call vs_core_fnc_log;
 
 Author:
 	Arend
@@ -22,12 +22,12 @@ License GPL-2.0
 ---------------------------------------------------------------------------- */
 params [["_message", "No Message", []], ["_fileName", "N/A", []]];
 
-if (oni_core_debug) then {
+if (vs_core_debug) then {
 	if (_fileName isEqualTo "N/A") then {
-		systemChat (format["[ONI Debug] %1", _message]);
-		diag_log format["[ONI Debug] %1", _message];
+		systemChat (format["[Viking Studios Debug] %1", _message]);
+		diag_log format["[Viking Studios Debug] %1", _message];
 	} else {
-		systemChat (format["[ONI Debug] [%1] %2", _fileName, _message]);
-		diag_log format["[ONI Debug] [%1] %2", _fileName, _message];
+		systemChat (format["[Viking Studios Debug] [%1] %2", _fileName, _message]);
+		diag_log format["[Viking Studios Debug] [%1] %2", _fileName, _message];
 	};
 };

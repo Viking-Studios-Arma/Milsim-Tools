@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_getCurators
+Function: vs_core_fnc_getCurators
 
 Description:
 	Get a list of players with the curator/zeus power.
@@ -11,7 +11,7 @@ Returns:
 	Array of players with curator powers <ARRAY>
 
 Examples:
-	call oni_core_fnc_getCurators;
+	call vs_core_fnc_getCurators;
 
 Author:
 	Arend

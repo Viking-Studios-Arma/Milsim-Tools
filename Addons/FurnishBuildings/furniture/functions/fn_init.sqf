@@ -1,4 +1,4 @@
-call compile preprocessFileLineNumbers "x\vs_oni_c\Furnish_Buildings\furniture\import.sqf";
+call compile preprocessFileLineNumbers "x\VS_C\Furnish_Buildings\furniture\import.sqf";
 
 // no HC or dedicated server allowed
 if !(hasInterface) exitWith {

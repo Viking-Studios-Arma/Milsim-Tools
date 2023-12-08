@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_edenLoadSettings
+Function: vs_core_fnc_edenLoadSettings
 
 Description:
 	Loads standard mission settings.
@@ -11,7 +11,7 @@ Returns:
 	Nothing.
 
 Examples:
-	[] call oni_core_fnc_edenLoadSettings;
+	[] call vs_core_fnc_edenLoadSettings;
 
 Author:
 	Met
@@ -27,4 +27,4 @@ set3DENMissionAttributes
 	["Multiplayer", "respawnTemplates", ["ace_spectator", "Counter", "Wave"]],
 	["Multiplayer", "respawnDelay", 90]
 ];
-systemChat "Loaded 2bnb Settings";
+systemChat "Loaded VS Settings";

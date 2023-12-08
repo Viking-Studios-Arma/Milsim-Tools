@@ -1,6 +1,6 @@
 class tint {
   class furniture {
-    file = "x\vs_oni_c\Furnish_Buildings\furniture\functions";
+    file = "x\VS_C\Furnish_Buildings\furniture\functions";
     class dressDown {};
     class dressUp {};
     class translate {};

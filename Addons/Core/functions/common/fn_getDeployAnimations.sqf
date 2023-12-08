@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: oni_core_fnc_getDeployAnimations
+Function: vs_core_fnc_getDeployAnimations
 
 Description:
 	Adds custom ACE interaction to deploy components for vehicles, such as
@@ -17,7 +17,7 @@ Returns:
 		2: displayName <STRING>
 
 Examples:
-	[_vehicle] call oni_core_fnc_getDeployAnimations;
+	[_vehicle] call vs_core_fnc_getDeployAnimations;
 
 Author:
 	Arend
@@ -32,7 +32,7 @@ if (_vehicle isEqualType objNull) then {
 };
 private _vehicleConfig = configFile >> "CfgVehicles" >> _vehicleClass;
 
-[format["Received data: %1, %2, %3", _vehicle, _vehicleClass, _vehicleConfig], "core\functions\common\fn_getDeployAnimations.sqf"] call oni_core_fnc_log;
+[format["Received data: %1, %2, %3", _vehicle, _vehicleClass, _vehicleConfig], "core\functions\common\fn_getDeployAnimations.sqf"] call vs_core_fnc_log;
 
 private _animationClasses = configProperties [
 	(_vehicleConfig >> "AnimationSources"),
@@ -44,7 +44,7 @@ private _animationClasses = configProperties [
 // 	!(getText (_vehicleConfig >> "AnimationSources" >> _x >> "displayName") isEqualTo "")
 // 	&& getText (_vehicleConfig >> "AnimationSources" >> _x >> "source") isEqualTo "user";
 // };
-// [format["Checking Config: %1", _animationClasses], "core\functions\common\fn_getDeployAnimations.sqf"] call oni_core_fnc_log;
+// [format["Checking Config: %1", _animationClasses], "core\functions\common\fn_getDeployAnimations.sqf"] call vs_core_fnc_log;
 
 private _animations = [];
 
