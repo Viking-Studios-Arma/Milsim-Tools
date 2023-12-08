@@ -27,7 +27,7 @@
 
 <p>
 
-Adding much-needed functionality to the Arma 3 game for the Milsim groups through a collection of open-source scripts we have permission to use/upload and scripts we have made or built upon. (This mod will also be the core mod of ant Milsim units that the Viking Studios team decides to make in the future)
+Adding much-needed functionality to the Arma 3 game for Milsim groups through a collection of open-source scripts we have permission to use/upload and scripts we have made or built upon. (This mod will also be the core mod of ant Milsim units that the Viking Studios team decides to make in the future)
 
 Features include;
 - Admin Messages
