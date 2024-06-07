@@ -9,10 +9,10 @@ Example(s): call VS_fnc_FilterAllVehicles;
 */
 
 // Retrieve necessary variables
-private _sourceObject = player getVariable ["SourceObject", objNull];
-private _typeToSpawn = _sourceObject getVariable ["TypeToSpawn", "All"];
-waitUntil { !isNil _typeToSpawn };
-private _allVehiclesArray = missionNamespace getVariable ["AllConfigVehicles", []];
+private _sourceObject = player getVariable "SourceObjectSpawner";
+private _type = _sourceObject getVariable "TypeToSpawn";
+waitUntil { !isNil "_type" };
+private _allVehiclesArray = missionNamespace getVariable "AllConfigVehicles";
 
 // Initialize resulting array
 private _resultingArray = [];
@@ -54,15 +54,15 @@ private _filterBySubcategory = {
 };
 
 // Apply additional filters based on user-selected vehicle type
-private _userSelectedVehicleType = player getVariable ["UserSelectedVehicleType", "All"];
-if !isNil _userSelectedVehicleType then {
+private _userSelectedVehicleType = player getVariable "UserSelectedVehicleType";
+if !(isNil "_userSelectedVehicleType") then {
     private _filteredArray = [];
 
     {
         if ([ _x, _userSelectedVehicleType ] call _filterBySubcategory) then {
             _filteredArray pushBack _x;
         };
-    } forEach _resultingArray;
+    };
 
     _resultingArray = _filteredArray;
 };

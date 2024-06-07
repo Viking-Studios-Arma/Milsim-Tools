@@ -10,29 +10,23 @@ Example: call VS_fnc_SpawnerInit;
 */
 
 [] spawn {
-    // Wait until the required CBA settings are available or we are in the editor
     waitUntil {
         sleep 0.5;
-        !isNil "cba_settings_ready" || is3DEN
+        !(isNil "cba_settings_ready")
     };
 
-    // Get all vehicle config names
     private _allVehicleConfigs = "true" configClasses (configFile >> "CfgVehicles");
     private _allVehicleConfigNames = _allVehicleConfigs apply { configName _x };
 
-    // Filter vehicles and create a list of all relevant vehicles
     private _allVehiclesArray = [];
     {
         private _disp = getNumber (configFile >> "CfgVehicles" >> _x >> "scope");
-        if (_disp == 2) then {
-            if (_x isKindOf "Helicopter_Base_F" || _x isKindOf "Plane_Base_F" || _x isKindOf "UAV" || _x isKindOf "Car_F" || _x isKindOf "Tank_F" || _x isKindOf "Boat_F") then {
-                _allVehiclesArray pushBackUnique _x;
-            }
+        if (_disp == 2 && {_x isKindOf "Helicopter_Base_F" || _x isKindOf "Plane_Base_F" || _x isKindOf "UAV" || _x isKindOf "Car_F" || _x isKindOf "Tank_F" || _x isKindOf "Boat_F"}) then {
+            _allVehiclesArray pushBack _x;
         }
     } forEach _allVehicleConfigNames;
     missionNamespace setVariable ["AllConfigVehicles", _allVehiclesArray, true];
 
-    // Create a list of all DLCs
     private _dlcArray = [];
     {
         private _dlc = getText (configFile >> "CfgVehicles" >> _x >> "dlc");
@@ -41,29 +35,26 @@ Example: call VS_fnc_SpawnerInit;
     } forEach _allVehiclesArray;
     missionNamespace setVariable ["DLCsList", _dlcArray, true];
 
-    // Initialize CBA settings for DLCs
     {
         [_x, "CHECKBOX", getText (configFile >> "CfgMods" >> _x >> "name"), "VS Spawner Allowed DLCs", true, 1, { call VS_fnc_FilterAllowedDLCs; }] call cba_settings_fnc_init;
     } forEach _dlcArray;
 
-    // Create a list of all factions
     private _factionsArray = [];
     {
         private _faction = getText (configFile >> "CfgVehicles" >> _x >> "faction");
         if !(_faction in _factionsArray) then { _factionsArray pushBack _faction; };
     } forEach _allVehiclesArray;
-    missionNamespace setVariable ["FactionsList", _factionsArray, true];
 
-    // Initialize CBA settings for factions
     {
         if (_x == "Default") then {
-            private _deBuGMess = format ["VS Spawner - error faction %1 is named 'default' faction will not be included to avoid conflicts with CBA", (str _x)];
-            diag_log _deBuGMess;
+            diag_log format ["VS Spawner - error faction %1 is named 'default'. This faction will not be included to avoid conflicts with CBA", (str _x)];
         } else {
             [_x, "CHECKBOX", getText (configFile >> "CfgFactionClasses" >> _x >> "displayName"), "VS Spawner Allowed Factions", true, 1, { call VS_fnc_FilterAllowedFactions; }] call cba_settings_fnc_init;
         };
     } forEach _factionsArray;
-
-    // Sort factions
-    call VS_fnc_SortFactionsAlgo;
+    missionNamespace setVariable ["FactionsList", _factionsArray, true];
 };
+
+call VS_fnc_FilterAllowedDLCs;
+call VS_fnc_SortFactionsAlgo;
+diag_log "VS_fnc_SpawnerInit: Initialization complete.";

@@ -48,4 +48,3 @@ if !(_type in ["All", "Air", "Land", "Sea"]) then {
 };
 
 // Log the initialized spawner details (optional for debugging)
-

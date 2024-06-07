@@ -24,7 +24,7 @@ private _selectedDLC = _ctrlCombo lbData _selected;
 if (isNil "_selectedDLC") exitWith { diag_log "VS_fnc_UserSelectedDLC: Selected DLC is nil"; };
 
 // Store the selected DLC in a player variable
-player setVariable ["userSelectedDLC", [_selectedDLC]];
+player setVariable ["UserSelectedDLC", _selectedDLC];
 
 // Refresh the main list and faction combo box with the new selected DLC
 diag_log "VS_fnc_UserSelectedDLC: Refreshing main list and faction combo";

@@ -24,7 +24,7 @@ private _selectedFaction = _ctrlCombo lbData _selected;
 if (isNil "_selectedFaction") exitWith { diag_log "VS_fnc_UserSelectedFaction: Selected faction is nil"; };
 
 // Store the selected faction in a player variable
-player setVariable ["userSelectedFaction", [_selectedFaction]];
+player setVariable ["UserSelectedFaction", _selectedFaction];
 
 // Refresh the main list with the new selected faction
 diag_log "VS_fnc_UserSelectedFaction: Refreshing main list";

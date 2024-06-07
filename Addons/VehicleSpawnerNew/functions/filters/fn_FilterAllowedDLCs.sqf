@@ -5,31 +5,25 @@ Description: Filters the list of allowed mods and DLCs according to CBA settings
 Return value: None
 Public: No
 Parameters: None
-Example(s):
-call VS_fnc_FilterAllowedDLCs;
+Example(s): call VS_fnc_FilterAllowedDLCs;
 */
 
-private _allDLCsList = missionNamespace getVariable ["DLCsList", []];
+// Retrieve the list of all DLCs from missionNamespace
+private _DLCsList = missionNamespace getVariable ["DLCsList", []];
 
-if (count _allDLCsList == 0) then {
-    diag_log "VS_fnc_FilterAllowedDLCs: No DLCs found in DLCsList.";
-};
+// Initialize an empty array to store allowed DLCs
+private _allowedArray = [];
 
-private _allowedDLCsList = [];
-
+// Iterate through each DLC in the list and filter based on CBA settings
 {
-    private _dlcSetting = [_x] call cba_settings_fnc_get;
-    if (_dlcSetting) then {
-        _allowedDLCsList pushBack _x;
+    private _setting = [_x] call cba_settings_fnc_get;
+    if (_setting) then {
+        _allowedArray pushBack _x;
     };
-} forEach _allDLCsList;
+} forEach _DLCsList;
 
-if (count _allowedDLCsList == 0) then {
-    diag_log "VS_fnc_FilterAllowedDLCs: No allowed DLCs found based on CBA settings.";
-};
+// Store the allowed DLCs list back into missionNamespace
+missionNamespace setVariable ["AllowedDLCsList", _allowedArray, true];
 
-missionNamespace setVariable ["AllowedDLCsList", _allowedDLCsList, true];
-
+// Call the function to sort factions after setting the allowed DLCs list
 call VS_fnc_SortFactionsAlgo;
-
-diag_log "VS_fnc_FilterAllowedDLCs: Allowed DLCs list updated and sorted.";

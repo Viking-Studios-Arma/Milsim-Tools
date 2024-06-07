@@ -8,9 +8,9 @@ Parameters: None
 Example(s): call VS_fnc_SortFactionsAlgo;
 */
 
-private _allVehicleConfigNames = missionNamespace getVariable ["AllConfigVehicles", []];
-private _allAllowedDLCs = missionNamespace getVariable ["AllowedDLCsList", []];
-private _allAllowedFactions = missionNamespace getVariable ["AllowedFactionsList", []];
+private _allVehicleConfigNames = missionNamespace getVariable "AllConfigVehicles";
+private _allAllowedDLCs = missionNamespace getVariable "AllowedDLCsList";
+private _allAllowedFactions = missionNamespace getVariable "AllowedFactionsList";
 
 diag_log format ["VS_fnc_SortFactionsAlgo: _allVehicleConfigNames size: %1", count _allVehicleConfigNames];
 diag_log format ["VS_fnc_SortFactionsAlgo: _allAllowedDLCs size: %1", count _allAllowedDLCs];

@@ -12,10 +12,10 @@ call VS_fnc_FillFactionCombo;
 disableSerialization;
 
 // Retrieve necessary data from missionNamespace
-private _allVehicleConfigNames = missionNamespace getVariable ["AllConfigVehicles", []];
-private _allowedDLCsList = missionNamespace getVariable ["AllowedDLCsList", []];
-private _allowedFactionsList = missionNamespace getVariable ["AllowedFactionsList", []];
-private _selectedDLC = player getVariable ["UserSelectedDLC", "All"];
+private _allVehicleConfigNames = missionNamespace getVariable "AllConfigVehicles";
+private _allowedDLCsList = missionNamespace getVariable "AllowedDLCsList";
+private _allowedFactionsList = missionNamespace getVariable "AllowedFactionsList";
+private _selectedDLC = player getVariable "UserSelectedDLC";
 
 // If "All" is selected, use all allowed DLCs
 if ("All" in _selectedDLC) then {
@@ -48,9 +48,8 @@ private _remainingFactions = ["All"];
 
 // Add remaining factions
 {
-    private _faction = getText (configFile >> "CfgVehicles" >> _x >> "faction");
-    if !(_faction in _remainingFactions) then {
-        _remainingFactions pushBack _faction;
+    if !(_x in _remainingFactions) then {
+        _remainingFactions pushBack _x;
     };
 } forEach _factionsFromAllowedFactions;
 

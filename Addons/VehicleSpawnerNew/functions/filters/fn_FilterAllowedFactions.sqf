@@ -9,27 +9,23 @@ Example(s):
 call VS_fnc_FilterAllowedFactions;
 */
 
-private _allFactionsList = missionNamespace getVariable ["FactionsList", []];
+// Retrieve the list of all factions from missionNamespace
+private _FactionsList = missionNamespace getVariable ["FactionsList", []];
 
-if (count _allFactionsList == 0) then {
-    diag_log "VS_fnc_FilterAllowedFactions: No factions found in FactionsList.";
-};
+// Initialize an empty array to store allowed factions
+private _allowedArray = [];
 
-private _allowedFactionsList = [];
-
+// Iterate through each faction in the list and filter based on CBA settings
 {
-    private _factionSetting = [_x] call cba_settings_fnc_get;
-    if (_factionSetting) then {
-        _allowedFactionsList pushBack _x;
+    private _setting = [_x] call cba_settings_fnc_get;
+    if (_setting) then {
+        _allowedArray pushBack _x;
     };
-} forEach _allFactionsList;
+} forEach _FactionsList;
 
-if (count _allowedFactionsList == 0) then {
-    diag_log "VS_fnc_FilterAllowedFactions: No allowed factions found based on CBA settings.";
-};
+// Store the allowed factions list back into missionNamespace
+missionNamespace setVariable ["AllowedFactionsList", _allowedArray, true];
 
-missionNamespace setVariable ["AllowedFactionsList", _allowedFactionsList, true];
-
+// Call the function to sort factions after setting the allowed factions list
 call VS_fnc_SortFactionsAlgo;
 
-diag_log "VS_fnc_FilterAllowedFactions: Allowed factions list updated and sorted.";

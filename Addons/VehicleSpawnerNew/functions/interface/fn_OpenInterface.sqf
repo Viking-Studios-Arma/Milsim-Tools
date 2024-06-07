@@ -8,55 +8,102 @@ Parameters: None
 Example(s): call VS_fnc_OpenInterface;
 */
 
-// Create the dialog
-createDialog "VS_Spawner";
-disableSerialization;
+///creates the dialog
+createdialog "VS_Spawner";
+/////////////////////
+disableserialization;
+//////////sets defaultpic
+_pic = "x\VS_C\spawner\Paa\welcome.paa";
+((findDisplay 2121) displayCtrl 1201) ctrlSetText _pic;
+_icon = "x\VS_C\spawner\Paa\VSlogo.paa";
+((findDisplay 2121) displayCtrl 1203) ctrlSetText _icon;
 
-// Set default picture and icon
-private _defaultPic = "x\VS_C\spawner\Paa\welcome.paa";
-((findDisplay 2121) displayCtrl 1201) ctrlSetText _defaultPic;
-private _iconPic = "x\VS_C\spawner\Paa\VSlogo.paa";
-((findDisplay 2121) displayCtrl 1203) ctrlSetText _iconPic;
 
-// Define localization variables
-private _localizations = [
-    ["All", localize "STR_VS_SPAWNER_ALL_MALE"],
-    ["Helis", localize "STR_VS_SPAWNER_CHOPPERS"],
-    ["Planes", localize "STR_VS_SPAWNER_PLANES"],
-    ["Drones", localize "STR_VS_SPAWNER_DRONES"],
-    ["Cars", localize "STR_VS_SPAWNER_CARS"],
-    ["Trucks", localize "STR_VS_SPAWNER_TRUCKS"],
-    ["APCs", localize "STR_VS_SPAWNER_APCs"],
-    ["MRAPs", localize "STR_VS_SPAWNER_MRAPS"],
-    ["Tanks", localize "STR_VS_SPAWNER_TANKS"],
-    ["Maritime", localize "STR_VS_SPAWNER_MARITIME"]
-];
 
-// Define category choices based on type
-private _categoriesByType = [
-    ["All", ["All", "Helis", "Planes", "Drones", "Cars", "Trucks", "APCs", "MRAPs", "Tanks", "Maritime"]],
-    ["Air", ["All", "Helis", "Planes", "Drones"]],
-    ["Land", ["All", "Cars", "Trucks", "APCs", "MRAPs", "Tanks"]],
-    ["Sea", ["All", "Maritime"]]
-];
 
-// Refresh the main list
-[] spawn {
-    disableSerialization;
-    call VS_fnc_RefreshMainList;
+[] Spawn {
+disableserialization;
+call VS_fnc_RefreshMainList;
+_sourceObject = player getVariable "SourceObjectSpawner";///ici
+_Type = _sourceObject getVariable "TypeToSpawn"; 
+waitUntil {!isNil "_Type"};
+disableserialization;
+///// DEFINES CATEGORY CHOICES
+_ctrlcombo = ((findDisplay 2121) displayCtrl 2100);
+////localization vars
+_locAll = localize "STR_VS_SPAWNER_ALL_MALE";
+_locChops= localize "STR_VS_SPAWNER_CHOPPERS";
+_locPlanes = localize "STR_VS_SPAWNER_PLANES";
+_locUAV = localize "STR_VS_SPAWNER_DRONES";
+_locCrs = localize "STR_VS_SPAWNER_CARS";
+_locTrucks = localize "STR_VS_SPAWNER_TRUCKS";
+_locAPC = localize "STR_VS_SPAWNER_APCs";
+_locMRAP = localize "STR_VS_SPAWNER_MRAPS";
+_locTanks= localize "STR_VS_SPAWNER_TANKS";
+_locSea = localize "STR_VS_SPAWNER_MARITIME";
+///
+switch (true) do {
+case (_Type == "All") : {
+_allTypes = _ctrlcombo lbadd _locAll;
+lbSetData [2100, _allTypes, "All"]; 
+_Helis = _ctrlcombo lbadd _locChops;
+lbSetData [2100, _Helis, "Helis"]; 
+_Planes = _ctrlcombo lbadd _locPlanes;
+lbSetData [2100, _Planes, "Planes"];
+_Drones = _ctrlcombo lbadd _locUAV;
+lbSetData [2100, _Drones, "Drones"];
+_Cars = _ctrlcombo lbadd _locCrs;
+lbSetData [2100, _Cars, "Cars"]; 
+_Trucks = _ctrlcombo lbadd _locTrucks;
+lbSetData [2100, _Trucks, "Trucks"];
+_APCs= _ctrlcombo lbadd _locAPC;
+lbSetData [2100, _APCs, "APCs"];
+_MRAPs = _ctrlcombo lbadd _locMRAP;
+lbSetData [2100, _MRAPs, "MRAPs"];
+_Tanks = _ctrlcombo lbadd _locTanks;
+lbSetData [2100, _Tanks, "Tanks"];
+_Maritime = _ctrlcombo lbadd _locSea;
+lbSetData [2100, _Maritime, "Maritime"];
+};
 
-    // Retrieve necessary variables
-    private _sourceObject = player getVariable ["SourceObject", objNull];
-    private _typeToSpawn = _sourceObject getVariable ["TypeToSpawn", "All"];
-    waitUntil { !isNil _typeToSpawn };
+case (_Type == "Air") : {
+_allTypes = _ctrlcombo lbadd _locAll;
+lbSetData [2100, _allTypes, "All"];
+_Helis = _ctrlcombo lbadd _locChops;
+lbSetData [2100, _Helis, "Helis"]; 
+_Planes = _ctrlcombo lbadd _locPlanes;
+lbSetData [2100, _Planes, "Planes"];
+_Drones = _ctrlcombo lbadd _locUAV;
+lbSetData [2100, _Drones, "Drones"];
+};
 
-    private _ctrlCombo = ((findDisplay 2121) displayCtrl 2100);
+case (_Type == "Land") : {
+_allTypes = _ctrlcombo lbadd _locAll;
+lbSetData [2100, _allTypes, "All"];
+_Cars = _ctrlcombo lbadd _locCrs;
+lbSetData [2100, _Cars, "Cars"]; 
+_Trucks = _ctrlcombo lbadd _locTrucks;
+lbSetData [2100, _Trucks, "Trucks"];
+_APCs= _ctrlcombo lbadd _locAPC;
+lbSetData [2100, _APCs, "APCs"];
+_MRAPs = _ctrlcombo lbadd _locMRAP;
+lbSetData [2100, _MRAPs, "MRAPs"];
+_Tanks = _ctrlcombo lbadd _locTanks;
+lbSetData [2100, _Tanks, "Tanks"];
+};
 
-    // Add categories to combo box
-    {
-        private _category = _x;
-        private _localization = _localizations select { _x select 0 == _category } select 0 select 1;
-        private _index = _ctrlCombo lbAdd _localization;
-        _ctrlCombo lbSetData [2100, _index, _category];
-    } forEach (_categoriesByType select { _x select 0 == _typeToSpawn } select 0 select 1);
+case (_Type == "Sea") : {
+_allTypes = _ctrlcombo lbadd _locAll;
+lbSetData [2100, _allTypes, "All"];
+_Maritime = _ctrlcombo lbadd _locSea;
+lbSetData [2100, _Maritime, "Maritime"];
+
+};
+};
+
+
+
+
+
+///EndSpawnBelow
 };

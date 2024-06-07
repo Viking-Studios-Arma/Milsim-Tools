@@ -24,7 +24,7 @@ private _selectedType = _ctrlCombo lbData _selected;
 if (isNil "_selectedType") exitWith { diag_log "VS_fnc_SelectType: Selected type is nil"; };
 
 // Set the selected type as a player variable
-player setVariable ["VS_Spawner_UserSelectedVehicleType", _selectedType];
+player setVariable ["VS_UserSelectedVehicleType", _selectedType];
 
 // Refresh the main list with the new selected type
 diag_log "VS_fnc_SelectType: Refreshing main list";
