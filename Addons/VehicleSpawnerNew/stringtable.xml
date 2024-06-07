@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="VSVehicleSpawner">
+    <Package name="VSVehicleSpawner">
+        <Container name="SpawnerMain">
+            <Key ID="STR_VS_SPAWNER_ALL_FEMALE">
+                <Original>All</Original>
+                <English>All</English>
+                <French>Toutes</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_ALL_MALE">
+                <Original>All</Original>
+                <English>All</English>
+                <French>Tous</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_CHOPPERS">
+                <Original>Helicopters</Original>
+                <English>Helicopters</English>
+                <French>Hélicoptères</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_PLANES">
+                <Original>Planes</Original>
+                <English>Planes</English>
+                <French>Avions</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_DRONES">
+                <Original>UAVs</Original>
+                <English>UAVs</English>
+                <French>Drones</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_CARS">
+                <Original>Cars</Original>
+                <English>Cars</English>
+                <French>Voitures</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_TRUCKS">
+                <Original>Trucks</Original>
+                <English>Trucks</English>
+                <French>Camions</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_APCs">
+                <Original>APCs</Original>
+                <English>APCs</English>
+                <French>Véhicules de transport de troupes</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_MRAPS">
+                <Original>MRAPs</Original>
+                <English>MRAPs</English>
+                <French>Blindages anti-mines (MRAPs)</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_TANKS">
+                <Original>Tanks</Original>
+                <English>Tanks</English>
+                <French>Tanks</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_MARITIME">
+                <Original>Maritime</Original>
+                <English>Maritime</English>
+                <French>Maritime</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_GENERATING1">
+                <Original>Generating vehicle.</Original>
+                <English>Generating vehicle.</English>
+                <French>Génération du véhicule en cours.</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_GENERATING2">
+                <Original>Generating vehicle..</Original>
+                <English>Generating vehicle..</English>
+                <French>Génération du véhicule en cours..</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_GENERATING3">
+                <Original>Generating vehicle...</Original>
+                <English>Generating vehicle...</English>
+                <French>Génération du véhicule en cours...</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_GENERATING4">
+                <Original>Generating vehicle....</Original>
+                <English>Generating vehicle....</English>
+                <French>Génération du véhicule en cours....</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_VEHCREATED">
+                <Original>Vehicle created</Original>
+                <English>Vehicle created</English>
+                <French>Véhicule créé</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_SPAWNBUTTON">
+                <Original>Spawn</Original>
+                <English>Spawn</English>
+                <French>Générer</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_CLOSEBUTTON">
+                <Original>Close</Original>
+                <English>Close</English>
+                <French>Fermer</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_SELECTMODTOOLTIP">
+                <Original>Select DLC/Mod</Original>
+                <English>Select DLC/Mod</English>
+                <French>Sélectionner le DLC/Mod</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_SELECTFACTIONTOOLTIP">
+                <Original>Select faction</Original>
+                <English>Select faction</English>
+                <French>Sélectionner la faction</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_ACEOPEN">
+                <Original>Open vehicle spawner interface</Original>
+                <English>Open vehicle spawner interface</English>
+                <French>Ouvrir l'interface du spawner de véhicules</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_ERROR_NOSPAWN">
+                <Original>No spawn position defined. Spawn will be set behind the source object.</Original>
+                <English>No spawn position defined. Spawn will be set behind the source object.</English>
+                <French>Position de spawn non définie. Le spawn sera défini derrière l'objet source.</French>
+            </Key>
+            <Key ID="STR_VS_SPAWNER_ERROR_WRONGTYPE">
+                <Original>Wrong type defined. Type must be 'All', 'Air', 'Land', or 'Sea'. Default value will be set to 'All'.</Original>
+                <English>Wrong type defined. Type must be 'All', 'Air', 'Land', or 'Sea'. Default value will be set to 'All'.</English>
+                <French>Type incorrect défini. Le type doit être 'Tous', 'Air', 'Terre' ou 'Mer'. La valeur par défaut sera 'Tous'.</French>
+            </Key>
+        </Container>
+    </Package>
+</Project>

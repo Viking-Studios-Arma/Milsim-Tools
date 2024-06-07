@@ -36,7 +36,7 @@ private _availableFilters = [
 
 private _availableFilterNames = [
 	["Full", "Unlimited Arsenal!"],
-	["Standard", "All Camo Viking Studios equipment"],
+	["Standard", "All Standard equipment"],
 	"Mission"
 ];
 
