@@ -41,59 +41,65 @@ _nameSection = format ["%1_section", _camo];
 _nameCommand = format ["%1_command", _camo];
 _nameDefaults = format ["%1_defaults", _camo];
 
-_centralPos = screenToWorld [0, 0];
+_centralPos = screenToWorld [0.5, 0.5];
+_camPos = [getPosATL get3DENCamera select 0, getPosATL get3DENCamera select 1, 0];
+_spawnPos = _centralPos;
+if (_centralPos distance _camPos > 500) then {
+	_spawnPos = _camPos;
+};
+
 _entities =
 [
 	[
-		["Marker", "mil_circle", _centralPos vectorAdd [10, 0]],
+		["Marker", "mil_circle", _spawnPos vectorAdd [10, 0]],
 		["markerName", "respawn"],
 		["text", "respawn"]
 	],
 	[
-		["Logic", "ModuleCurator_F", _centralPos vectorAdd [-1, 0]],
+		["Logic", "ModuleCurator_F", _spawnPos vectorAdd [-1, 0]],
 		["ModuleCurator_F_Owner", "zeusOne"],
 		["ModuleCurator_F_Name", "Active Zeus"],
 		["ModuleCurator_F_Addons", 3]
 	],
 	[
-		["Logic", "ModuleCurator_F", _centralPos vectorAdd [-1, -1]],
+		["Logic", "ModuleCurator_F", _spawnPos vectorAdd [-1, -1]],
 		["ModuleCurator_F_Owner", "zeusTwo"],
 		["ModuleCurator_F_Name", "Assistant Zeus"],
 		["ModuleCurator_F_Addons", 3]
 	],
 	[
-		["Logic", "ModuleCurator_F", _centralPos vectorAdd [-1, -2]],
+		["Logic", "ModuleCurator_F", _spawnPos vectorAdd [-1, -2]],
 		["ModuleCurator_F_Owner", "#adminLogged"],
 		["ModuleCurator_F_Name", "Admin"],
 		["ModuleCurator_F_Addons", 3]
 	],
 	[
-		["Logic", "HeadlessClient_F", _centralPos vectorAdd [-2, 0]],
+		["Logic", "HeadlessClient_F", _spawnPos vectorAdd [-2, 0]],
 		["ControlMp", true],
 		["name", "HC1"]
 	],
 	[
-		["Logic", "HeadlessClient_F", _centralPos vectorAdd [-2, -1]],
+		["Logic", "HeadlessClient_F", _spawnPos vectorAdd [-2, -1]],
 		["ControlMp", true],
 		["name", "HC2"]
 	],
 	[
-		["Logic", "HeadlessClient_F", _centralPos vectorAdd [-2, -2]],
+		["Logic", "HeadlessClient_F", _spawnPos vectorAdd [-2, -2]],
 		["ControlMp", true],
 		["name", "HC3"]
 	],
 	[
-		["Object", "B_supplyCrate_F", _centralPos vectorAdd [-3, 6]],
+		["Object", "B_supplyCrate_F", _spawnPos vectorAdd [-3, 6]],
 		["allowDamage", false],
 		["ArsenalObject", true]
 	],
 	[
-		["Logic", "vs_cORE_Barracks_Module", _centralPos vectorAdd [-4, 7]],
+		["Logic", "vs_cORE_Barracks_Module", _spawnPos vectorAdd [-4, 7]],
 		["vs_cORE_Barracks_Module_ArsenalFilter", "Standard"],
 		["ArsenalObject", true]
 	],
 	[
-		["Object", "B_supplyCrate_F", _centralPos vectorAdd [-5, 6]],
+		["Object", "B_supplyCrate_F", _spawnPos vectorAdd [-5, 6]],
 		["allowDamage", false],
 		["ArsenalObject", true]
 	]
@@ -102,12 +108,12 @@ _entities =
 _sections =
 [
 	[
-		[configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameCommand, _centralPos vectorAdd [0, 0]],
+		[configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameCommand, _spawnPos vectorAdd [0, 0]],
 		"Command",
 		["description", format ["1: 1IC@%1 1-Actual", _callsign ]]
 	],
 	[
-		[configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameZeus, _centralPos vectorAdd [1, 2]],
+		[configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameZeus, _spawnPos vectorAdd [1, 2]],
 		"Zeus",
 		["description", format ["1: Zeus@%1", _zeusCallsign]]
 	]
@@ -130,7 +136,7 @@ _last = "";
 // The main sections
 _num = 1;
 for "_i" from 1 to _numberOfSections do {
-	create3DENComposition [configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameSection, _centralPos vectorAdd [_num, 0, 0]];
+	create3DENComposition [configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameSection, _spawnPos vectorAdd [_num, 0, 0]];
 	set3DENAttributes [[get3DENSelected "Group", "groupID", format ["1-%1 Sec", _i]], [get3DENSelected "Object", "ControlMP", true]];
 	_group = get3DENselected "Object" select 0;
 	_ix = 3;
@@ -190,7 +196,7 @@ for "_i" from 1 to _numberOfSections do {
 
 // default Loadouts
 if (_createDefaults) then {
-	create3DENComposition [configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameDefaults, _centralPos vectorAdd [_num + 2, 3, 0]];
+	create3DENComposition [configfile >> "CfgGroups" >> "West" >> "vs_core_compositions" >> "infantry" >> _nameDefaults, _spawnPos vectorAdd [_num + 2, 3, 0]];
 	set3DENAttributes [[get3DENSelected "Group", "groupID", "Default Loadouts"], [get3DENSelected "Object", "vs_cORE_3den_Loadout", true]];
 	_groupComp = get3DENSelected "Object";
 	{
